@@ -5,7 +5,7 @@ V {}
 S {}
 F {}
 E {}
-B 2 390 -850 1190 -450 {flags=graph
+B 2 1300 -270 2100 -50 {flags=graph
 y1=-0.086
 y2=1.3
 ypos1=0
@@ -28,10 +28,10 @@ autoload=1
 sweep=time
 color=4
 node=ro_raw
-rawfile=$netlist_dir/temp-sens-core_pvt.raw}
-B 2 390 -1260 1190 -860 {flags=graph
+rawfile=$netlist_dir/temp-sens-core_pvt_tt.raw}
+B 2 1300 -920 2100 -750 {flags=graph
 y1=0
-y2=1.3
+y2=4
 ypos1=0
 ypos2=1.3
 divy=5
@@ -47,15 +47,66 @@ node="en
 en_n"
 color="5 6"
 dataset=-1
-unitx=1
+unitx=G
 logx=0
 logy=0
 sim_type=tran
 autoload=1
 sweep=time
 digital=1
-rawfile=$netlist_dir/temp-sens-core_pvt.raw}
-T {tcleval(deltaf: [to_eng [expr [xschem raw value f 0]]]Hz)} 390 -440 0 0 0.4 0.4 {floater=1}
+rawfile=$netlist_dir/temp-sens-core_pvt_tt.raw
+vlegend=0
+legendmag=1
+legend=0}
+B 2 1300 -510 2100 -290 {flags=graph
+y1=-0.037875
+y2=1.348125
+ypos1=0
+ypos2=2
+divy=5
+subdivy=1
+unity=1
+x1=0
+x2=1e-06
+divx=5
+subdivx=1
+xlabmag=1.0
+ylabmag=1.0
+dataset=-1
+unitx=1
+logx=0
+logy=0
+sim_type=tran
+autoload=1
+sweep=time
+color=4
+node=ro_raw
+rawfile=$netlist_dir/temp-sens-core_pvt_ss.raw}
+B 2 1300 -750 2100 -530 {flags=graph
+y1=-0.037875
+y2=1.348125
+ypos1=0
+ypos2=2
+divy=5
+subdivy=1
+unity=1
+x1=0
+x2=1e-06
+divx=5
+subdivx=1
+xlabmag=1.0
+ylabmag=1.0
+dataset=-1
+unitx=1
+logx=0
+logy=0
+sim_type=tran
+autoload=1
+sweep=time
+color=4
+node=ro_raw
+rawfile=$netlist_dir/temp-sens-core_pvt_ff.raw}
+T {tcleval(deltaf: [to_eng [expr [xschem raw value f]]]Hz)} 2120 -100 0 0 0.4 0.4 {floater=1}
 N 130 -120 130 -110 {lab=0}
 N 110 -110 130 -110 {lab=0}
 N 90 -120 90 -110 {lab=0}
@@ -132,20 +183,13 @@ C {vdd.sym} 280 -190 0 0 {name=l9 lab=VDD}
 C {vdd.sym} 110 -190 0 0 {name=l10 lab=VDD}
 C {lab_pin.sym} 350 -190 2 0 {name=p1 sig_type=std_logic lab=EN}
 C {gnd.sym} 350 -110 0 0 {name=l12 lab=0}
-C {simulator_commands.sym} 0 -710 0 0 {name=Libs_Ngspice1
+C {simulator_commands.sym} 1140 -160 0 0 {name=EN_behavior_tt
 simulator=ngspice
 only_toplevel=false 
 value="
 .lib cornerMOSlv.lib mos_tt
-.lib cornerMOShv.lib mos_tt
 .lib cornerRES.lib res_typ
-.lib cornerDIO.lib dio_tt
-"}
-C {simulator_commands.sym} 0 -530 0 0 {name=EN_behavior
-simulator=ngspice
-only_toplevel=false 
-value="
-* ngspice commands
+
 .option rshunt=1e12
 .option klu
 .control
@@ -153,17 +197,17 @@ value="
 tran 0.1n 1u
 
 meas tran tperiod \\
-+ TRIG v(ro_raw) VAL=0.9 RISE=2 TD=100n \\
-+ TARG v(ro_raw) VAL=0.9 RISE=3 TD=100n
++ TRIG v(ro_raw) VAL=0.9 RISE=2 TD=60n \\
++ TARG v(ro_raw) VAL=0.9 RISE=3 TD=60n
 
 let f = 1/tperiod
 
-write temp-sens-core_pvt.raw time ro_raw en en_n
+write temp-sens-core_pvt_tt.raw time ro_raw en en_n f
 .endc
 "
 }
 C {lab_pin.sym} 520 -240 2 0 {name=p2 sig_type=std_logic lab=EN_n}
-C {simulator_commands.sym} 130 -710 0 0 {name=tff_includes
+C {simulator_commands.sym} 0 -520 0 0 {name=tff_includes
 simulator=ngspice
 only_toplevel=false 
 value="
@@ -195,3 +239,49 @@ C {gnd.sym} 760 -120 0 0 {name=l4 lab=0}
 C {analog/temp-sens-core/temp_sens_core.sym} 890 -170 0 0 {name=x1 lstarv=0.46u cpar=0f}
 C {lab_pin.sym} 710 -150 0 0 {name=p3 sig_type=std_logic lab=EN_n}
 C {lab_pin.sym} 710 -170 0 0 {name=p4 sig_type=std_logic lab=EN}
+C {simulator_commands.sym} 1140 -400 0 0 {name=EN_behavior_ss
+simulator=ngspice
+only_toplevel=false 
+value="
+.lib cornerMOSlv.lib mos_ss
+.lib cornerRES.lib res_typ
+
+.option rshunt=1e12
+.option klu
+.control
+
+tran 0.1n 1u
+
+meas tran tperiod \\
++ TRIG v(ro_raw) VAL=0.9 RISE=2 TD=100n \\
++ TARG v(ro_raw) VAL=0.9 RISE=3 TD=100n
+
+let f = 1/tperiod
+
+write temp-sens-core_pvt_ss.raw time ro_raw en en_n
+.endc
+"
+spice_ignore=true}
+C {simulator_commands.sym} 1140 -640 0 0 {name=EN_behavior_ff
+simulator=ngspice
+only_toplevel=false 
+value="
+.lib cornerMOSlv.lib mos_ff
+.lib cornerRES.lib res_typ
+
+.option rshunt=1e12
+.option klu
+.control
+
+tran 0.1n 1u
+
+meas tran tperiod \\
++ TRIG v(ro_raw) VAL=0.9 RISE=2 TD=100n \\
++ TARG v(ro_raw) VAL=0.9 RISE=3 TD=100n
+
+let f = 1/tperiod
+
+write temp-sens-core_pvt_ff.raw time ro_raw en en_n
+.endc
+"
+spice_ignore=true}
