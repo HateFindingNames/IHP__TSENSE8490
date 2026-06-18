@@ -38,8 +38,6 @@ fi
 cat $PDKPATH/libs.tech/xschem/xschemrc > $XSCHEMRC
 echo "set dircolor([file dirname [info script]]) green" >> $XSCHEMRC
 echo "set editor { xterm -geometry 100x40 -e nano }" >> $XSCHEMRC
-# echo "set terminal {xterm -geometry 120x48 -fn 9x15 -fs 11 -bg #181818 -fg white -cr white -ms white }" >> $XSCHEMRC
-# echo "set terminal {xterm -geometry 120x48 -fa 'Monospace' -fs 14 -bg #181818 -fg white -cr white -ms white -u8}" >> $XSCHEMRC
 echo "set terminal {xterm -geometry 120x48 -fs 14 -bg #181818 -fg white -cr white -ms white -u8}" >> $XSCHEMRC
 echo "set dark_colors {
    "#181818" "#00ccee" "#3f3f3f" "#cccccc" "#88dd00"
