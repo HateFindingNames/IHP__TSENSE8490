@@ -31,7 +31,8 @@ legend=1
 mode=Line
 color=4
 node=frequency
-hcursor1_y=2.4622446e+08}
+hcursor1_y=2.4289826e+08
+rawfile=$netlist_dir/temp-sens-core_temp-sweep.raw}
 B 2 1130 -810 1930 -410 {flags=graph
 y1=-0.031
 y2=1.3
@@ -81,7 +82,13 @@ autoload=1
 sweep=time
 digital=1
 rawfile=$netlist_dir/temp-sens-core_temp-sweep_temp25_wave.raw}
-T {tcleval(deltaf: [to_eng [expr [xschem raw value frequency [expr [xschem raw points 0] - 1] 0] - [xschem raw value frequency 0 0]]]Hz)} 310 -400 0 0 0.4 0.4 {floater=1}
+T {tcleval([
+  xschem raw read "$netlist_dir/temp-sens-core_temp-sweep_temp25_wave"
+  set v [xschem raw value f 0 0]
+
+  return "tt/f = [to_eng $v]Hz"
+])
+} 1137.5 -405 0 0 0.2 0.2 {floater=1}
 N 130 -120 130 -110 {lab=0}
 N 110 -110 130 -110 {lab=0}
 N 90 -120 90 -110 {lab=0}
@@ -95,7 +102,7 @@ N 760 -180 770 -180 {lab=VDD}
 N 760 -190 760 -180 {lab=VDD}
 N 760 -120 770 -120 {lab=0}
 N 760 -120 760 -110 {lab=0}
-N 1010 -150 1050 -150 {lab=ro_raw}
+N 1030 -150 1050 -150 {lab=ro_raw}
 N 390 -240 390 -170 {lab=EN}
 N 390 -240 470 -240 {lab=EN}
 N 510 -240 510 -220 {lab=EN_n}
@@ -107,6 +114,8 @@ N 510 -260 510 -240 {lab=EN_n}
 N 470 -290 470 -240 {lab=EN}
 N 740 -160 770 -160 {lab=EN}
 N 740 -140 770 -140 {lab=EN_n}
+N 1030 -150 1030 -130 {lab=ro_raw}
+N 1010 -150 1030 -150 {lab=ro_raw}
 C {vsource.sym} 280 -140 0 0 {name=Vdd value=1.2 savecurrent=false}
 C {title.sym} 160 0 0 0 {name=l6 author="Dennis Hunter"}
 C {devices/launcher.sym} 60 -460 0 0 {name=h3
@@ -158,14 +167,16 @@ C {simulator_commands.sym} 0 -660 0 0 {name=temp_sweep
 simulator=ngspice
 only_toplevel=false 
 value="
-* ngspice commands
+** ngr_lib cornerMOSlv.lib mos_tt mos_ff mos_ss mos_tt_mismatch
+** ngr_lib cornerRES.lib res_typ
+** ngr_out f
+** ngr_name temp-sens-core_temp-sweep-tb
+
 .option rshunt=1e12
 .option klu
 *.param cpar=0
 *.param lstarv=0.18u
 .control
-set num_threads = 8
-
 let temp_start = -20
 let temp_stop = 140
 let temp_delta = 10
@@ -196,22 +207,24 @@ while tcur <= temp_stop
 
   if tcur = 20
     write temp-sens-core_temp-sweep_temp25_wave.raw \{$dt\}.time \{$dt\}.v(ro_raw) \{$dt\}.en \{$dt\}.en_n
-*    let time25 = \{$dt\}.time
-*    let ro_raw25 = \{$dt\}.v(ro_raw)
+    let time25 = \{$dt\}.time
+    let f = 1/\{$dt\}.tperiod
+    print f
+    let ro_raw25 = \{$dt\}.v(ro_raw)
   end
 
   let frequency[i] = 1/\{$dt\}.tperiod
-
   let tcur = tcur + temp_delta
   let i = i+1
 end
 
 setplot $scratch
 
-settype temp-sweep temperature
+*settype temp-sweep temperature
 settype frequency frequency
-setscale frequency temperature
-write temp-sens-core_temp-sweep.raw temperature frequency
+*setscale frequency temperature
+**write temp-sens-core_temp-sweep.raw temperature frequency
+write $rawfile temperature ro_raw en en_n frequency
 .endc
 "
 }
@@ -228,7 +241,7 @@ C {simulator_commands.sym} 130 -840 0 0 {name=tff_includes
 simulator=ngspice
 only_toplevel=false 
 value="
-.include /foss/pdks/ihp-sg13cmos5l/libs.ref/sg13cmos5l_stdcell/spice/sg13cmos5l_stdcell.spice
+.include sg13cmos5l_stdcell.spice
 "
 }
 C {vdd.sym} 760 -190 0 0 {name=l2 lab=VDD}
@@ -258,3 +271,36 @@ C {vdd.sym} 510 -320 0 0 {name=l23 lab=VDD}
 C {vsource.sym} 390 -140 0 0 {name=V2 value="pulse 0 1.2 50n 1n 1n 200n 400n" savecurrent=false}
 C {lab_pin.sym} 740 -140 0 0 {name=p3 sig_type=std_logic lab=EN_n}
 C {lab_pin.sym} 740 -160 0 0 {name=p4 sig_type=std_logic lab=EN}
+C {capa.sym} 1030 -100 0 0 {name=C1
+m=1
+value=0.2f
+footprint=1206
+device="ceramic capacitor"}
+C {gnd.sym} 1030 -70 0 0 {name=l7 lab=0}
+C {launcher.sym} 60 -415 0 0 {name=h2
+descr=RunNGRUN.py
+tclcommand="
+xschem netlist
+
+set sch_file [xschem get current_name]
+set sch_dir [file dirname $sch_file]
+set sch_base [file rootname [file tail $sch_file]]
+set netlist [file join $sch_dir simulation $\{sch_base\}.spice]
+
+set script $env(DESIGNS)/ngrun.py
+set logfile [file join $sch_dir simulation ngrun.log]
+
+if \{![file exists $netlist]\} \{
+    tk_messageBox -icon error -message \\"Netlist not found:\\n$netlist\\"
+    return
+\}
+
+if \{![file exists $script]\} \{
+    tk_messageBox -icon error -message \\"Python script not found:\\n$script\\"
+    return
+\}
+
+exec \{*\}$terminal -lc -u8 -hold -e sh -c \{
+  python3 -u "$1" -k -j 1 "$2" 2>&1 | tee "$3"
+\} sh $script $netlist $logfile &
+"}
