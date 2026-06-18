@@ -4,13 +4,16 @@ Welcome 👋
 
 In this repository I host all design-files for my self-tought mixed-signal on-chip temperature sensor.
 
+
 ## Layout
 
 ![floorplan|400](layout/floorplan/floorplan.svg)
 
+
 ## Tools
 
 I am using the all-in-one docker container [IIC-OSIC-TOOLS](https://github.com/iic-jku/iic-osic-tools) and [IHPs PDK](https://github.com/IHP-GmbH/IHP-Open-PDK) with the [SG13CMOS5L](https://github.com/IHP-GmbH/ihp-sg13cmos5l) process node - which is nativly included in IIC-OSIC-TOOLS as of tag [2026.04](https://github.com/iic-jku/IIC-OSIC-TOOLS/releases/tag/2026.04).
+
 
 ### Pre-Flight Configuration
 
@@ -43,6 +46,7 @@ echo 'export KLAYOUT_PATH="$PDKPATH/libs.tech/klayout:$PDKPATH/libs.tech/klayout
 
 💫 Now start the container as instructed with the env variable ``DESIGNS`` pointing to the project repository.
 
+
 ### Ngspice Specifics
 
 Copy the PDKs ``.spiceinit`` file to the ``$DESIGNS`` dir and append some customizations:
@@ -57,6 +61,27 @@ Make Ngspice load it by setting the env variable:
 ```bash
 echo "export SPICE_USERINIT_DIR=$DESIGNS" >> "$__fish_config_dir/profile.fish"
 ```
+
+
+### External Python Scripts
+
+I am using a customized version of [qnzy/ngrun](https://github.com/qnzy/ngrun.git).
+My customizations include:
+
+- Moved ``temp_dir`` to the netlists base dir.
+- Added timestamp to the temp dir name.
+- Added some extra info to the terminal (elapsed time per run, etc.).
+- Some visual adjustments to the terminal output.
+- Put output ``*.csv`` file inside ``temp_dir``.
+- Make ``ngspice`` put a ``run.log`` next to the spice files inside ``temp_dir``.
+- Make ``ngspice`` put the ``*.raw`` files next to the spice files inside ``temp_dir``.
+
+The module [ngspice_raw_read.py](./ngspice_raw_read.py) reads ngspice binary files and stores the data in a Pandas data frame for ez manipulation.
+
+
+## Digital
+
+See [digital/div16/README.md](digital/div16/README.md).
 
 
 ## QOL
