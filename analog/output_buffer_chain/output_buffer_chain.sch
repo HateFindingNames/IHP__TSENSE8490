@@ -8,9 +8,9 @@ E {}
 T {Small} 110 -360 0 0 0.4 0.4 {}
 T {Medium} 280 -360 0 0 0.4 0.4 {}
 T {Large} 470 -360 0 0 0.4 0.4 {}
-N 140 -100 140 -50 {lab=0}
-N 500 -100 500 -50 {lab=0}
-N 320 -100 320 -50 {lab=0}
+N 140 -100 140 -50 {lab=VSS}
+N 500 -100 500 -50 {lab=VSS}
+N 320 -100 320 -50 {lab=VSS}
 N 140 -150 140 -130 {lab=#net1}
 N 280 -150 280 -100 {lab=#net1}
 N 460 -150 460 -100 {lab=#net2}
@@ -32,10 +32,10 @@ N 320 -250 320 -200 {lab=VDD}
 N 500 -250 500 -200 {lab=VDD}
 N 320 -250 500 -250 {lab=VDD}
 N 140 -250 320 -250 {lab=VDD}
-N 320 -50 500 -50 {lab=0}
-N 140 -50 320 -50 {lab=0}
+N 320 -50 500 -50 {lab=VSS}
+N 140 -50 320 -50 {lab=VSS}
 N 320 -260 320 -250 {lab=VDD}
-N 320 -50 320 -40 {lab=0}
+N 320 -50 320 -40 {lab=VSS}
 C {sg13g2_pr/sg13_lv_nmos.sym} 120 -100 0 0 {name=M1
 l=0.45u
 w=2.0u
@@ -84,7 +84,7 @@ m=1
 model=sg13_lv_pmos
 spiceprefix=X
 }
-C {ipin.sym} 40 -150 0 0 {name=p2 lab=IN}
-C {opin.sym} 600 -150 0 0 {name=p3 lab=OUT}
-C {vdd.sym} 320 -260 0 0 {name=l1 lab=VDD}
-C {gnd.sym} 320 -40 0 0 {name=l2 lab=0}
+C {ipin.sym} 40 -150 0 0 {name=p0 lab=IN}
+C {opin.sym} 600 -150 0 0 {name=p2 lab=OUT}
+C {iopin.sym} 320 -40 1 0 {name=p3 lab=VSS}
+C {iopin.sym} 320 -260 3 0 {name=p1 lab=VDD}

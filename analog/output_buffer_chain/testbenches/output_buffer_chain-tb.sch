@@ -57,7 +57,9 @@ im(out)
 ph(out)"}
 P 4 1 120 -300 {}
 N 420 -190 420 -170 {lab=vp}
-N 850 -160 1050 -160 {lab=out}
+N 890 -160 930 -160 {lab=out}
+N 890 -160 890 -140 {lab=out}
+N 850 -160 890 -160 {lab=out}
 C {analog/output_buffer_chain/output_buffer_chain.sym} 630 -40 0 0 {name=x1}
 C {gnd.sym} 420 -110 0 0 {name=l1 lab=0}
 C {vsource.sym} 420 -140 0 0 {name=V1 value="pulse 0 1.2 0 1n 1n 10n 20n" savecurrent=false}
@@ -108,7 +110,7 @@ write_data [save_params] $netlist_dir/[file rootname [file tail [xschem get curr
 xschem netlist
 simulate
 "}
-C {lab_wire.sym} 1050 -160 0 1 {name=p7 sig_type=std_logic lab=out}
+C {lab_wire.sym} 930 -160 0 1 {name=p7 sig_type=std_logic lab=out}
 C {code.sym} 0 -270 0 0 {name=transient only_toplevel=false value="
 .param temp=27
 .control
@@ -141,10 +143,12 @@ ac dec 1000 10meg 100meg
 write output_buffer_chain-tb_ac.raw out
 .endc
 "}
-C {capa.sym} 1010 -130 0 0 {name=C1
+C {capa.sym} 890 -110 0 0 {name=C1
 m=1
 value=0.2p
 footprint=1206
 device="ceramic capacitor"}
-C {gnd.sym} 1010 -100 0 0 {name=l4 lab=0}
+C {gnd.sym} 890 -80 0 0 {name=l4 lab=0}
 C {vdd.sym} 340 -170 0 0 {name=l2 lab=VDD}
+C {vdd.sym} 790 -200 0 0 {name=l5 lab=VDD}
+C {gnd.sym} 790 -120 0 0 {name=l7 lab=0}
