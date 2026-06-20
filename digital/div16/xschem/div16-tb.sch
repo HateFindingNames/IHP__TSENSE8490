@@ -155,7 +155,8 @@ value="
 *.param lstarv=0.18u
 .control
 set rawfile = div16-tb.raw
-tran 0.05n 300n
+
+tran 0.05n 1u
 
 *meas tran tperiod \\
 *  + TRIG v(ro_raw) VAL=0.6 RISE=2 TD=75n \\

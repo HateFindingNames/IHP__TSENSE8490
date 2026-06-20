@@ -3,7 +3,7 @@ G {}
 K {type=subcircuit
 format="@name @pinlist @symname"
 template="name=x1"
-spice_sym_def=".include digital/div16/div16.spice"}
+spice_sym_def=".include digital/div16/xschem/div16.spice"}
 V {}
 S {type=subcircuit
 format="@name @pinlist @symname"
