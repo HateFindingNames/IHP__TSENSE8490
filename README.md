@@ -7,7 +7,12 @@ In this repository I host all design-files for my self-tought mixed-signal on-ch
 
 ## Layout
 
-![floorplan|400](layout/floorplan/floorplan.svg)
+![floorplan|400](layout/img/floorplan.svg)
+
+
+### Current Starved RO
+
+![current_starved_ro.png|400](layout/img/current_starved_ro.png)
 
 
 ## Tools
