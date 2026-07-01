@@ -1,3 +1,12 @@
+# TSENSE8490
+
+Single-technology IP library.
+
+- doc/     : user documentation
+- dependencies/ : sub-cells and blocks
+- release/v.1.0.0 : immutable versioned deliveries
+
+
 # Self-tought Mixed-Signal On-Chip Temperature Sensor
 
 Welcome 👋
@@ -7,20 +16,38 @@ In this repository I host all design-files for my self-tought mixed-signal on-ch
 
 ## Layout
 
-![floorplan|400](layout/img/floorplan.svg)
+![floorplan|400](TSENSE8490-main/layout/klayout/img/floorplan.svg)
 
-|                |                 |
-| -------------- | --------------- |
-| **Category**   | Mixed-Signal    |
-| **Technology** | IHP SG13CMOS5L  |
-| **Top Cell**   | `OCTS`          |
-| **Die Size**   | 1.0 mm × 1.0 mm |
-| **License**    | Apache-2.0      |
-
+|                |                  |
+| ----------------| ------------------|
+| **Category**   | Mixed-Signal SoC |
+| **Technology** | IHP SG13CMOS5L   |
+| **Top Cell**   | `TSENSE8490`     |
+| **Die Size**   | 1.0 mm × 1.0 mm  |
+| **License**    | Apache-2.0       |
 
 ### Current Starved RO
 
-![current_starved_ro.png|400](layout/img/current_starved_ro.png)
+![current_starved_ro|400](TSENSE8490-main/layout/klayout/img/current_starved_ro.png)
+
+
+## Sims
+
+
+### Transient
+
+![full|400](TSENSE8490-main/testbenches/tran/xschem/octs-full-tb.svg)
+
+
+### Corners
+
+Mismatch, 25C
+
+![mm25c|400](TSENSE8490-main/testbenches/corners/xschem/mm25c.svg)
+
+Mismatch, T-sweep
+
+![mmtsweep|400](TSENSE8490-main/testbenches/corners/xschem/mmtsweep.svg)
 
 
 ## Tools
@@ -38,7 +65,7 @@ mkdir -p ~/chipdesignstuff && cd ~/chipdesignstuff
 Clone [IIC-OSIC-TOOLS](https://github.com/iic-jku/iic-osic-tools) and this repository:
 ```shell
 git clone https://github.com/iic-jku/IIC-OSIC-TOOLS.git
-git clone https://gitlab.com/opdkstuff/octs_testdesign.git
+git clone https://gitlab.com/opdkstuff/IHP__TSENSE8490.git
 ```
 
 Make some environment variables stick and apply on login:
@@ -50,7 +77,7 @@ Make some environment variables stick and apply on login:
 > ```
 
 ```bash
-echo 'export DESIGNS="$HOME/chipdesignstuff/octs_testdesign"' >> "$__fish_config_dir/profile.fish"
+echo 'export DESIGNS="$HOME/chipdesignstuff/IHP__TSENSE8490"' >> "$__fish_config_dir/profile.fish"
 echo 'export PDK=ihp-sg13cmos5l' >> "$__fish_config_dir/profile.fish"
 echo 'export PDKPATH=$PDK_ROOT/$PDK' >> "$__fish_config_dir/profile.fish"
 echo 'export STD_CELL_LIBRARY=sg13cmos5l_stdcell' >> "$__fish_config_dir/profile.fish"
@@ -94,7 +121,7 @@ The module [ngspice_raw_read.py](./ngspice_raw_read.py) reads ngspice binary fil
 
 ## Digital
 
-See [digital/div16/README.md](digital/div16/README.md).
+See [TSENSE8490-main/schematic/xschem/digital/div16/README.md](TSENSE8490-main/schematic/xschem/digital/div16/README.md).
 
 
 ## QOL
@@ -128,9 +155,8 @@ X-KDE-Username=
 
 ---
 
-# LICENSE
 
-Licensed under the Apache License 2.0.
+# License
 
 ```
 Licensed under the Apache License, Version 2.0 (the "License");
