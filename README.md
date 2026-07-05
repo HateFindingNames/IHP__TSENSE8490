@@ -36,7 +36,7 @@ In this repository I host all design-files for my self-tought mixed-signal on-ch
 
 ### Transient
 
-![full|400](TSENSE8490-main/testbenches/tran/xschem/octs-full-tb.svg)
+![full|400](TSENSE8490-main/testbenches/tran/xschem/TSENSE8490-full-tb.svg)
 
 
 ### Corners
@@ -128,6 +128,55 @@ See [TSENSE8490-main/schematic/xschem/digital/div16/README.md](TSENSE8490-main/s
 
 > [!note]
 > I am running an Arch-based Distro. The following are **quality of live** configurations I've made and are not stricktly necessary.
+
+
+### Klayout Numpad decimal remap
+
+> [!note]
+> QWERTY? Lucky you.
+
+Klayout does not allow change of decimal sign. As i am on a QWERTZ layout and constantly need to enter a lot of numerical values, this is a huge pita.
+To help with that, change `comma` to `dot` only while Klayout window is focused:
+
+1. Install `keyd`: `pacman -Ss keyd`
+2. Add user to `keyd` group: `sudo usermod -aG keyd $USER` and log in/out or reboot.
+3. Create a user service:
+```
+echo '[Unit]
+Description=keyd application-specific mapper
+After=graphical-session.target
+PartOf=graphical-session.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/keyd-application-mapper
+Restart=on-failure
+RestartSec=2
+
+[Install]
+WantedBy=default.target' > ~/.config/systemd/user/keyd-application-mapper.service
+```
+4. Enable it:
+```
+systemctl --user daemon-reload \
+systemctl --user enable --now keyd-application-mapper.service
+```
+5. Add this to `~/.config/keyd/app.conf`:
+
+```
+[klayout|*]
+
+kpdot = macro(.)
+```
+
+### Klayout Keymap
+
+Put [klayoutrc](klayoutrc) in `$KLAYOUT_HOME/`.
+
+![klayout_keymap|400](klayout_keymap.svg)
+
+
+### Desktop file
 
 I am starting an stopping the tools **a lot**. So, for a little more convenience, here are some extra configurations to make life easier.
 

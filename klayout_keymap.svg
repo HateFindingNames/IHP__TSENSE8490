@@ -1,0 +1,271 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1616" height="730" viewBox="0 0 1616 730">
+<rect width="100%" height="100%" fill="#020617"/>
+
+<defs>
+  <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+    <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#0f172a" stroke-width="1"/>
+  </pattern>
+</defs>
+<rect width="100%" height="100%" fill="url(#grid)" opacity="0.65"/>
+
+<text x="32" y="38" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="30" font-weight="800" fill="#f8fafc" text-anchor="start">KLayout Key Bindings Cheat Sheet</text>
+<rect x="68" y="80" width="96" height="88" rx="10" fill="#020617" stroke="#1e293b" stroke-width="1"/>
+<text x="75" y="98" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="700" fill="#f8fafc" text-anchor="start">Esc</text>
+<rect x="234" y="80" width="96" height="88" rx="10" fill="#111827" stroke="#64748b" stroke-width="1.6"/>
+<text x="241" y="98" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="700" fill="#f8fafc" text-anchor="start">F1</text>
+<rect x="239" y="109" width="86" height="15" rx="4" fill="#1e40af" stroke="none" stroke-width="0"/>
+<text x="242" y="120" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="10" font-weight="500" fill="#f8fafc" text-anchor="start">help</text>
+<rect x="338" y="80" width="96" height="88" rx="10" fill="#020617" stroke="#1e293b" stroke-width="1"/>
+<text x="345" y="98" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="700" fill="#f8fafc" text-anchor="start">F2</text>
+<rect x="442" y="80" width="96" height="88" rx="10" fill="#111827" stroke="#64748b" stroke-width="1.6"/>
+<text x="449" y="98" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="700" fill="#f8fafc" text-anchor="start">F3</text>
+<rect x="447" y="109" width="86" height="15" rx="4" fill="#1e40af" stroke="none" stroke-width="0"/>
+<text x="450" y="120" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="10" font-weight="500" fill="#f8fafc" text-anchor="start">edit opts</text>
+<rect x="546" y="80" width="96" height="88" rx="10" fill="#020617" stroke="#1e293b" stroke-width="1"/>
+<text x="553" y="98" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="700" fill="#f8fafc" text-anchor="start">F4</text>
+<rect x="686" y="80" width="96" height="88" rx="10" fill="#111827" stroke="#64748b" stroke-width="1.6"/>
+<text x="693" y="98" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="700" fill="#f8fafc" text-anchor="start">F5</text>
+<rect x="691" y="109" width="86" height="15" rx="4" fill="#1e40af" stroke="none" stroke-width="0"/>
+<text x="694" y="120" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="10" font-weight="500" fill="#f8fafc" text-anchor="start">reload</text>
+<rect x="790" y="80" width="96" height="88" rx="10" fill="#020617" stroke="#1e293b" stroke-width="1"/>
+<text x="797" y="98" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="700" fill="#f8fafc" text-anchor="start">F6</text>
+<rect x="894" y="80" width="96" height="88" rx="10" fill="#020617" stroke="#1e293b" stroke-width="1"/>
+<text x="901" y="98" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="700" fill="#f8fafc" text-anchor="start">F7</text>
+<rect x="998" y="80" width="96" height="88" rx="10" fill="#020617" stroke="#1e293b" stroke-width="1"/>
+<text x="1005" y="98" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="700" fill="#f8fafc" text-anchor="start">F8</text>
+<rect x="1138" y="80" width="96" height="88" rx="10" fill="#020617" stroke="#1e293b" stroke-width="1"/>
+<text x="1145" y="98" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="700" fill="#f8fafc" text-anchor="start">F9</text>
+<rect x="1242" y="80" width="96" height="88" rx="10" fill="#020617" stroke="#1e293b" stroke-width="1"/>
+<text x="1249" y="98" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="700" fill="#f8fafc" text-anchor="start">F10</text>
+<rect x="1346" y="80" width="96" height="88" rx="10" fill="#020617" stroke="#1e293b" stroke-width="1"/>
+<text x="1353" y="98" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="700" fill="#f8fafc" text-anchor="start">F11</text>
+<rect x="1450" y="80" width="96" height="88" rx="10" fill="#020617" stroke="#1e293b" stroke-width="1"/>
+<text x="1457" y="98" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="700" fill="#f8fafc" text-anchor="start">F12</text>
+<rect x="32" y="178" width="96" height="88" rx="10" fill="#020617" stroke="#1e293b" stroke-width="1"/>
+<text x="39" y="196" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="700" fill="#f8fafc" text-anchor="start">^</text>
+<rect x="136" y="178" width="96" height="88" rx="10" fill="#111827" stroke="#64748b" stroke-width="1.6"/>
+<text x="143" y="196" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="700" fill="#f8fafc" text-anchor="start">1</text>
+<rect x="141" y="207" width="86" height="15" rx="4" fill="#1e40af" stroke="none" stroke-width="0"/>
+<text x="144" y="218" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="10" font-weight="500" fill="#f8fafc" text-anchor="start">show all</text>
+<rect x="240" y="178" width="96" height="88" rx="10" fill="#111827" stroke="#64748b" stroke-width="1.6"/>
+<text x="247" y="196" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="700" fill="#f8fafc" text-anchor="start">2</text>
+<rect x="245" y="207" width="86" height="15" rx="4" fill="#1e40af" stroke="none" stroke-width="0"/>
+<text x="248" y="218" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="10" font-weight="500" fill="#f8fafc" text-anchor="start">show only</text>
+<rect x="344" y="178" width="96" height="88" rx="10" fill="#111827" stroke="#64748b" stroke-width="1.6"/>
+<text x="351" y="196" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="700" fill="#f8fafc" text-anchor="start">3</text>
+<rect x="349" y="207" width="86" height="15" rx="4" fill="#1e40af" stroke="none" stroke-width="0"/>
+<text x="352" y="218" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="10" font-weight="500" fill="#f8fafc" text-anchor="start">toggle vis.</text>
+<rect x="448" y="178" width="96" height="88" rx="10" fill="#111827" stroke="#64748b" stroke-width="1.6"/>
+<text x="455" y="196" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="700" fill="#f8fafc" text-anchor="start">4</text>
+<rect x="453" y="207" width="86" height="15" rx="4" fill="#1e40af" stroke="none" stroke-width="0"/>
+<text x="456" y="218" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="10" font-weight="500" fill="#f8fafc" text-anchor="start">hide empty</text>
+<rect x="552" y="178" width="96" height="88" rx="10" fill="#111827" stroke="#64748b" stroke-width="1.6"/>
+<text x="559" y="196" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="700" fill="#f8fafc" text-anchor="start">5</text>
+<rect x="557" y="207" width="86" height="15" rx="4" fill="#1e40af" stroke="none" stroke-width="0"/>
+<text x="560" y="218" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="10" font-weight="500" fill="#f8fafc" text-anchor="start">mk valid</text>
+<rect x="656" y="178" width="96" height="88" rx="10" fill="#111827" stroke="#64748b" stroke-width="1.6"/>
+<text x="663" y="196" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="700" fill="#f8fafc" text-anchor="start">6</text>
+<rect x="661" y="207" width="86" height="15" rx="4" fill="#1e40af" stroke="none" stroke-width="0"/>
+<text x="664" y="218" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="10" font-weight="500" fill="#f8fafc" text-anchor="start">mk invalid</text>
+<rect x="760" y="178" width="96" height="88" rx="10" fill="#020617" stroke="#1e293b" stroke-width="1"/>
+<text x="767" y="196" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="700" fill="#f8fafc" text-anchor="start">7</text>
+<rect x="864" y="178" width="96" height="88" rx="10" fill="#020617" stroke="#1e293b" stroke-width="1"/>
+<text x="871" y="196" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="700" fill="#f8fafc" text-anchor="start">8</text>
+<rect x="968" y="178" width="96" height="88" rx="10" fill="#111827" stroke="#64748b" stroke-width="1.6"/>
+<text x="975" y="196" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="700" fill="#f8fafc" text-anchor="start">9</text>
+<rect x="973" y="207" width="86" height="15" rx="4" fill="#1e40af" stroke="none" stroke-width="0"/>
+<text x="976" y="218" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="10" font-weight="500" fill="#f8fafc" text-anchor="start">hierarchies: 1</text>
+<rect x="1072" y="178" width="96" height="88" rx="10" fill="#111827" stroke="#64748b" stroke-width="1.6"/>
+<text x="1079" y="196" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="700" fill="#f8fafc" text-anchor="start">0</text>
+<rect x="1077" y="207" width="86" height="15" rx="4" fill="#1e40af" stroke="none" stroke-width="0"/>
+<text x="1080" y="218" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="10" font-weight="500" fill="#f8fafc" text-anchor="start">hierarchies: 0</text>
+<rect x="1176" y="178" width="96" height="88" rx="10" fill="#020617" stroke="#1e293b" stroke-width="1"/>
+<text x="1183" y="196" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="700" fill="#f8fafc" text-anchor="start">ß</text>
+<rect x="1280" y="178" width="96" height="88" rx="10" fill="#020617" stroke="#1e293b" stroke-width="1"/>
+<text x="1287" y="196" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="700" fill="#f8fafc" text-anchor="start">´</text>
+<rect x="1384" y="178" width="200" height="88" rx="10" fill="#020617" stroke="#1e293b" stroke-width="1"/>
+<text x="1391" y="196" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="700" fill="#f8fafc" text-anchor="start">Backspace</text>
+<rect x="32" y="276" width="148" height="88" rx="10" fill="#020617" stroke="#1e293b" stroke-width="1"/>
+<text x="39" y="294" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="700" fill="#f8fafc" text-anchor="start">Tab</text>
+<rect x="188" y="276" width="96" height="88" rx="10" fill="#020617" stroke="#1e293b" stroke-width="1"/>
+<text x="195" y="294" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="700" fill="#f8fafc" text-anchor="start">Q</text>
+<rect x="292" y="276" width="96" height="88" rx="10" fill="#020617" stroke="#1e293b" stroke-width="1"/>
+<text x="299" y="294" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="700" fill="#f8fafc" text-anchor="start">W</text>
+<rect x="396" y="276" width="96" height="88" rx="10" fill="#111827" stroke="#64748b" stroke-width="1.6"/>
+<text x="403" y="294" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="700" fill="#f8fafc" text-anchor="start">E</text>
+<rect x="401" y="305" width="86" height="15" rx="4" fill="#1e40af" stroke="none" stroke-width="0"/>
+<text x="404" y="316" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="10" font-weight="500" fill="#f8fafc" text-anchor="start">descend into</text>
+<rect x="401" y="322" width="86" height="15" rx="4" fill="#92400e" stroke="none" stroke-width="0"/>
+<text x="404" y="333" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="10" font-weight="500" fill="#f8fafc" text-anchor="start">desc</text>
+<rect x="401" y="339" width="86" height="15" rx="4" fill="#166534" stroke="none" stroke-width="0"/>
+<text x="404" y="350" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="10" font-weight="500" fill="#f8fafc" text-anchor="start">asc</text>
+<rect x="500" y="276" width="96" height="88" rx="10" fill="#111827" stroke="#64748b" stroke-width="1.6"/>
+<text x="507" y="294" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="700" fill="#f8fafc" text-anchor="start">R</text>
+<rect x="505" y="305" width="86" height="11" rx="4" fill="#1e40af" stroke="none" stroke-width="0"/>
+<text x="508" y="316" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="10" font-weight="500" fill="#f8fafc" text-anchor="start">ruler</text>
+<rect x="505" y="318" width="86" height="11" rx="4" fill="#92400e" stroke="none" stroke-width="0"/>
+<text x="508" y="329" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="10" font-weight="500" fill="#f8fafc" text-anchor="start">rot CCW</text>
+<rect x="505" y="331" width="86" height="11" rx="4" fill="#166534" stroke="none" stroke-width="0"/>
+<text x="508" y="342" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="10" font-weight="500" fill="#f8fafc" text-anchor="start">redraw</text>
+<rect x="505" y="344" width="86" height="11" rx="4" fill="#991b1b" stroke="none" stroke-width="0"/>
+<text x="508" y="355" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="10" font-weight="500" fill="#f8fafc" text-anchor="start">rot CW</text>
+<rect x="604" y="276" width="96" height="88" rx="10" fill="#111827" stroke="#64748b" stroke-width="1.6"/>
+<text x="611" y="294" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="700" fill="#f8fafc" text-anchor="start">T</text>
+<rect x="609" y="305" width="86" height="15" rx="4" fill="#1e40af" stroke="none" stroke-width="0"/>
+<text x="612" y="316" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="10" font-weight="500" fill="#f8fafc" text-anchor="start">tap</text>
+<rect x="609" y="322" width="86" height="15" rx="4" fill="#92400e" stroke="none" stroke-width="0"/>
+<text x="612" y="333" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="10" font-weight="500" fill="#f8fafc" text-anchor="start">cur cell</text>
+<rect x="708" y="276" width="96" height="88" rx="10" fill="#111827" stroke="#64748b" stroke-width="1.6"/>
+<text x="715" y="294" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="700" fill="#f8fafc" text-anchor="start">Z</text>
+<rect x="713" y="305" width="86" height="15" rx="4" fill="#166534" stroke="none" stroke-width="0"/>
+<text x="716" y="316" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="10" font-weight="500" fill="#f8fafc" text-anchor="start">undo</text>
+<rect x="713" y="322" width="86" height="15" rx="4" fill="#991b1b" stroke="none" stroke-width="0"/>
+<text x="716" y="333" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="10" font-weight="500" fill="#f8fafc" text-anchor="start">redo</text>
+<rect x="812" y="276" width="96" height="88" rx="10" fill="#020617" stroke="#1e293b" stroke-width="1"/>
+<text x="819" y="294" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="700" fill="#f8fafc" text-anchor="start">U</text>
+<rect x="916" y="276" width="96" height="88" rx="10" fill="#111827" stroke="#64748b" stroke-width="1.6"/>
+<text x="923" y="294" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="700" fill="#f8fafc" text-anchor="start">I</text>
+<rect x="921" y="305" width="86" height="15" rx="4" fill="#1e40af" stroke="none" stroke-width="0"/>
+<text x="924" y="316" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="10" font-weight="500" fill="#f8fafc" text-anchor="start">instance</text>
+<rect x="1020" y="276" width="96" height="88" rx="10" fill="#111827" stroke="#64748b" stroke-width="1.6"/>
+<text x="1027" y="294" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="700" fill="#f8fafc" text-anchor="start">O</text>
+<rect x="1025" y="305" width="86" height="15" rx="4" fill="#991b1b" stroke="none" stroke-width="0"/>
+<text x="1028" y="316" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="10" font-weight="500" fill="#f8fafc" text-anchor="start">open</text>
+<rect x="1124" y="276" width="96" height="88" rx="10" fill="#111827" stroke="#64748b" stroke-width="1.6"/>
+<text x="1131" y="294" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="700" fill="#f8fafc" text-anchor="start">P</text>
+<rect x="1129" y="305" width="86" height="15" rx="4" fill="#1e40af" stroke="none" stroke-width="0"/>
+<text x="1132" y="316" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="10" font-weight="500" fill="#f8fafc" text-anchor="start">path</text>
+<rect x="1129" y="322" width="86" height="15" rx="4" fill="#92400e" stroke="none" stroke-width="0"/>
+<text x="1132" y="333" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="10" font-weight="500" fill="#f8fafc" text-anchor="start">polygon</text>
+<rect x="1228" y="276" width="96" height="88" rx="10" fill="#020617" stroke="#1e293b" stroke-width="1"/>
+<text x="1235" y="294" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="700" fill="#f8fafc" text-anchor="start">Ü</text>
+<rect x="1332" y="276" width="96" height="88" rx="10" fill="#020617" stroke="#1e293b" stroke-width="1"/>
+<text x="1339" y="294" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="700" fill="#f8fafc" text-anchor="start">+</text>
+<rect x="1436" y="276" width="148" height="88" rx="10" fill="#020617" stroke="#1e293b" stroke-width="1"/>
+<text x="1443" y="294" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="700" fill="#f8fafc" text-anchor="start">#</text>
+<rect x="32" y="374" width="174" height="88" rx="10" fill="#020617" stroke="#1e293b" stroke-width="1"/>
+<text x="39" y="392" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="700" fill="#f8fafc" text-anchor="start">Caps</text>
+<rect x="214" y="374" width="96" height="88" rx="10" fill="#111827" stroke="#64748b" stroke-width="1.6"/>
+<text x="221" y="392" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="700" fill="#f8fafc" text-anchor="start">A</text>
+<rect x="219" y="403" width="86" height="15" rx="4" fill="#1e40af" stroke="none" stroke-width="0"/>
+<text x="222" y="414" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="10" font-weight="500" fill="#f8fafc" text-anchor="start">align</text>
+<rect x="219" y="420" width="86" height="15" rx="4" fill="#991b1b" stroke="none" stroke-width="0"/>
+<text x="222" y="431" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="10" font-weight="500" fill="#f8fafc" text-anchor="start">select all</text>
+<rect x="318" y="374" width="96" height="88" rx="10" fill="#111827" stroke="#64748b" stroke-width="1.6"/>
+<text x="325" y="392" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="700" fill="#f8fafc" text-anchor="start">S</text>
+<rect x="323" y="403" width="86" height="11" rx="4" fill="#1e40af" stroke="none" stroke-width="0"/>
+<text x="326" y="414" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="10" font-weight="500" fill="#f8fafc" text-anchor="start">partial</text>
+<rect x="323" y="416" width="86" height="11" rx="4" fill="#92400e" stroke="none" stroke-width="0"/>
+<text x="326" y="427" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="10" font-weight="500" fill="#f8fafc" text-anchor="start">select cell</text>
+<rect x="323" y="429" width="86" height="11" rx="4" fill="#166534" stroke="none" stroke-width="0"/>
+<text x="326" y="440" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="10" font-weight="500" fill="#f8fafc" text-anchor="start">save</text>
+<rect x="323" y="442" width="86" height="11" rx="4" fill="#991b1b" stroke="none" stroke-width="0"/>
+<text x="326" y="453" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="10" font-weight="500" fill="#f8fafc" text-anchor="start">save as</text>
+<rect x="422" y="374" width="96" height="88" rx="10" fill="#111827" stroke="#64748b" stroke-width="1.6"/>
+<text x="429" y="392" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="700" fill="#f8fafc" text-anchor="start">D</text>
+<rect x="427" y="403" width="86" height="15" rx="4" fill="#166534" stroke="none" stroke-width="0"/>
+<text x="430" y="414" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="10" font-weight="500" fill="#f8fafc" text-anchor="start">unselect all</text>
+<rect x="526" y="374" width="96" height="88" rx="10" fill="#111827" stroke="#64748b" stroke-width="1.6"/>
+<text x="533" y="392" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="700" fill="#f8fafc" text-anchor="start">F</text>
+<rect x="531" y="403" width="86" height="11" rx="4" fill="#1e40af" stroke="none" stroke-width="0"/>
+<text x="534" y="414" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="10" font-weight="500" fill="#f8fafc" text-anchor="start">fit</text>
+<rect x="531" y="416" width="86" height="11" rx="4" fill="#92400e" stroke="none" stroke-width="0"/>
+<text x="534" y="427" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="10" font-weight="500" fill="#f8fafc" text-anchor="start">max hierarchy</text>
+<rect x="531" y="429" width="86" height="11" rx="4" fill="#166534" stroke="none" stroke-width="0"/>
+<text x="534" y="440" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="10" font-weight="500" fill="#f8fafc" text-anchor="start">fit selection</text>
+<rect x="531" y="442" width="86" height="11" rx="4" fill="#7e22ce" stroke="none" stroke-width="0"/>
+<text x="534" y="453" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="10" font-weight="500" fill="#f8fafc" text-anchor="start">flatten</text>
+<rect x="630" y="374" width="96" height="88" rx="10" fill="#020617" stroke="#1e293b" stroke-width="1"/>
+<text x="637" y="392" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="700" fill="#f8fafc" text-anchor="start">G</text>
+<rect x="734" y="374" width="96" height="88" rx="10" fill="#111827" stroke="#64748b" stroke-width="1.6"/>
+<text x="741" y="392" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="700" fill="#f8fafc" text-anchor="start">H</text>
+<rect x="739" y="403" width="86" height="15" rx="4" fill="#1e40af" stroke="none" stroke-width="0"/>
+<text x="742" y="414" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="10" font-weight="500" fill="#f8fafc" text-anchor="start">paste</text>
+<rect x="739" y="420" width="86" height="15" rx="4" fill="#92400e" stroke="none" stroke-width="0"/>
+<text x="742" y="431" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="10" font-weight="500" fill="#f8fafc" text-anchor="start">flip X</text>
+<rect x="838" y="374" width="96" height="88" rx="10" fill="#020617" stroke="#1e293b" stroke-width="1"/>
+<text x="845" y="392" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="700" fill="#f8fafc" text-anchor="start">J</text>
+<rect x="942" y="374" width="96" height="88" rx="10" fill="#111827" stroke="#64748b" stroke-width="1.6"/>
+<text x="949" y="392" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="700" fill="#f8fafc" text-anchor="start">K</text>
+<rect x="947" y="403" width="86" height="15" rx="4" fill="#92400e" stroke="none" stroke-width="0"/>
+<text x="950" y="414" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="10" font-weight="500" fill="#f8fafc" text-anchor="start">clear rulers</text>
+<rect x="1046" y="374" width="96" height="88" rx="10" fill="#111827" stroke="#64748b" stroke-width="1.6"/>
+<text x="1053" y="392" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="700" fill="#f8fafc" text-anchor="start">L</text>
+<rect x="1051" y="403" width="86" height="15" rx="4" fill="#92400e" stroke="none" stroke-width="0"/>
+<text x="1054" y="414" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="10" font-weight="500" fill="#f8fafc" text-anchor="start">chg layer</text>
+<rect x="1150" y="374" width="96" height="88" rx="10" fill="#020617" stroke="#1e293b" stroke-width="1"/>
+<text x="1157" y="392" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="700" fill="#f8fafc" text-anchor="start">Ö</text>
+<rect x="1254" y="374" width="96" height="88" rx="10" fill="#020617" stroke="#1e293b" stroke-width="1"/>
+<text x="1261" y="392" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="700" fill="#f8fafc" text-anchor="start">Ä</text>
+<rect x="1358" y="374" width="226" height="88" rx="10" fill="#111827" stroke="#64748b" stroke-width="1.6"/>
+<text x="1365" y="392" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="700" fill="#f8fafc" text-anchor="start">Return</text>
+<rect x="1363" y="403" width="216" height="15" rx="4" fill="#1e40af" stroke="none" stroke-width="0"/>
+<text x="1366" y="414" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="10" font-weight="500" fill="#f8fafc" text-anchor="start">zoom+</text>
+<rect x="1363" y="420" width="216" height="15" rx="4" fill="#92400e" stroke="none" stroke-width="0"/>
+<text x="1366" y="431" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="10" font-weight="500" fill="#f8fafc" text-anchor="start">zoom-</text>
+<rect x="32" y="472" width="226" height="88" rx="10" fill="#020617" stroke="#1e293b" stroke-width="1"/>
+<text x="39" y="490" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="700" fill="#f8fafc" text-anchor="start">Shift</text>
+<rect x="266" y="472" width="96" height="88" rx="10" fill="#020617" stroke="#1e293b" stroke-width="1"/>
+<text x="273" y="490" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="700" fill="#f8fafc" text-anchor="start">&lt;</text>
+<rect x="370" y="472" width="96" height="88" rx="10" fill="#020617" stroke="#1e293b" stroke-width="1"/>
+<text x="377" y="490" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="700" fill="#f8fafc" text-anchor="start">Y</text>
+<rect x="474" y="472" width="96" height="88" rx="10" fill="#111827" stroke="#64748b" stroke-width="1.6"/>
+<text x="481" y="490" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="700" fill="#f8fafc" text-anchor="start">X</text>
+<rect x="479" y="501" width="86" height="15" rx="4" fill="#1e40af" stroke="none" stroke-width="0"/>
+<text x="482" y="512" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="10" font-weight="500" fill="#f8fafc" text-anchor="start">text</text>
+<rect x="578" y="472" width="96" height="88" rx="10" fill="#111827" stroke="#64748b" stroke-width="1.6"/>
+<text x="585" y="490" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="700" fill="#f8fafc" text-anchor="start">C</text>
+<rect x="583" y="501" width="86" height="15" rx="4" fill="#1e40af" stroke="none" stroke-width="0"/>
+<text x="586" y="512" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="10" font-weight="500" fill="#f8fafc" text-anchor="start">dupl</text>
+<rect x="583" y="518" width="86" height="15" rx="4" fill="#92400e" stroke="none" stroke-width="0"/>
+<text x="586" y="529" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="10" font-weight="500" fill="#f8fafc" text-anchor="start">crosshair</text>
+<rect x="682" y="472" width="96" height="88" rx="10" fill="#111827" stroke="#64748b" stroke-width="1.6"/>
+<text x="689" y="490" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="700" fill="#f8fafc" text-anchor="start">V</text>
+<rect x="687" y="501" width="86" height="15" rx="4" fill="#92400e" stroke="none" stroke-width="0"/>
+<text x="690" y="512" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="10" font-weight="500" fill="#f8fafc" text-anchor="start">flip Y</text>
+<rect x="786" y="472" width="96" height="88" rx="10" fill="#111827" stroke="#64748b" stroke-width="1.6"/>
+<text x="793" y="490" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="700" fill="#f8fafc" text-anchor="start">B</text>
+<rect x="791" y="501" width="86" height="15" rx="4" fill="#1e40af" stroke="none" stroke-width="0"/>
+<text x="794" y="512" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="10" font-weight="500" fill="#f8fafc" text-anchor="start">box</text>
+<rect x="890" y="472" width="96" height="88" rx="10" fill="#111827" stroke="#64748b" stroke-width="1.6"/>
+<text x="897" y="490" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="700" fill="#f8fafc" text-anchor="start">N</text>
+<rect x="895" y="501" width="86" height="15" rx="4" fill="#166534" stroke="none" stroke-width="0"/>
+<text x="898" y="512" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="10" font-weight="500" fill="#f8fafc" text-anchor="start">new</text>
+<rect x="994" y="472" width="96" height="88" rx="10" fill="#111827" stroke="#64748b" stroke-width="1.6"/>
+<text x="1001" y="490" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="700" fill="#f8fafc" text-anchor="start">M</text>
+<rect x="999" y="501" width="86" height="15" rx="4" fill="#1e40af" stroke="none" stroke-width="0"/>
+<text x="1002" y="512" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="10" font-weight="500" fill="#f8fafc" text-anchor="start">move</text>
+<rect x="999" y="518" width="86" height="15" rx="4" fill="#92400e" stroke="none" stroke-width="0"/>
+<text x="1002" y="529" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="10" font-weight="500" fill="#f8fafc" text-anchor="start">union</text>
+<rect x="999" y="535" width="86" height="15" rx="4" fill="#7e22ce" stroke="none" stroke-width="0"/>
+<text x="1002" y="546" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="10" font-weight="500" fill="#f8fafc" text-anchor="start">mk cell</text>
+<rect x="1098" y="472" width="96" height="88" rx="10" fill="#020617" stroke="#1e293b" stroke-width="1"/>
+<text x="1105" y="490" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="700" fill="#f8fafc" text-anchor="start">,</text>
+<rect x="1202" y="472" width="96" height="88" rx="10" fill="#020617" stroke="#1e293b" stroke-width="1"/>
+<text x="1209" y="490" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="700" fill="#f8fafc" text-anchor="start">.</text>
+<rect x="1306" y="472" width="96" height="88" rx="10" fill="#020617" stroke="#1e293b" stroke-width="1"/>
+<text x="1313" y="490" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="700" fill="#f8fafc" text-anchor="start">-</text>
+<rect x="1410" y="472" width="174" height="88" rx="10" fill="#020617" stroke="#1e293b" stroke-width="1"/>
+<text x="1417" y="490" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="700" fill="#f8fafc" text-anchor="start">Shift</text>
+<rect x="136" y="570" width="148" height="88" rx="10" fill="#020617" stroke="#1e293b" stroke-width="1"/>
+<text x="143" y="588" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="700" fill="#f8fafc" text-anchor="start">Ctrl</text>
+<rect x="292" y="570" width="148" height="88" rx="10" fill="#020617" stroke="#1e293b" stroke-width="1"/>
+<text x="299" y="588" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="700" fill="#f8fafc" text-anchor="start">Alt</text>
+<rect x="448" y="570" width="720" height="88" rx="10" fill="#020617" stroke="#1e293b" stroke-width="1"/>
+<text x="455" y="588" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="700" fill="#f8fafc" text-anchor="start">Space</text>
+<rect x="1176" y="570" width="148" height="88" rx="10" fill="#020617" stroke="#1e293b" stroke-width="1"/>
+<text x="1183" y="588" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="700" fill="#f8fafc" text-anchor="start">Alt</text>
+<rect x="1332" y="570" width="148" height="88" rx="10" fill="#020617" stroke="#1e293b" stroke-width="1"/>
+<text x="1339" y="588" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="700" fill="#f8fafc" text-anchor="start">Ctrl</text>
+<text x="32" y="682" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="13" font-weight="700" fill="#f8fafc" text-anchor="start">Modifier colors</text>
+<rect x="32" y="696" width="26" height="15" rx="4" fill="#1e40af" stroke="#334155" stroke-width="1"/>
+<text x="66" y="708" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="12" font-weight="400" fill="#cbd5e1" text-anchor="start">plain</text>
+<rect x="222" y="696" width="26" height="15" rx="4" fill="#92400e" stroke="#334155" stroke-width="1"/>
+<text x="256" y="708" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="12" font-weight="400" fill="#cbd5e1" text-anchor="start">S / Shift</text>
+<rect x="412" y="696" width="26" height="15" rx="4" fill="#166534" stroke="#334155" stroke-width="1"/>
+<text x="446" y="708" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="12" font-weight="400" fill="#cbd5e1" text-anchor="start">C / Ctrl</text>
+<rect x="602" y="696" width="26" height="15" rx="4" fill="#991b1b" stroke="#334155" stroke-width="1"/>
+<text x="636" y="708" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="12" font-weight="400" fill="#cbd5e1" text-anchor="start">CS / Ctrl+Shift</text>
+<rect x="792" y="696" width="26" height="15" rx="4" fill="#7e22ce" stroke="#334155" stroke-width="1"/>
+<text x="826" y="708" font-family="Inter, DejaVu Sans, Arial, sans-serif" font-size="12" font-weight="400" fill="#cbd5e1" text-anchor="start">AS / Alt+Shift</text>
+</svg>
