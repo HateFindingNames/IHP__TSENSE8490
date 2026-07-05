@@ -27,8 +27,6 @@ N 1220 -650 1220 -580 {lab=VDD}
 N 1060 -650 1220 -650 {lab=VDD}
 N 1380 -650 1380 -580 {lab=VDD}
 N 1220 -650 1380 -650 {lab=VDD}
-N 1460 -190 1540 -190 {lab=VSS}
-N 1300 -190 1380 -190 {lab=VSS}
 N 720 -580 840 -580 {lab=vgp}
 N 720 -590 720 -580 {lab=vgp}
 N 670 -580 720 -580 {lab=vgp}
@@ -77,7 +75,6 @@ N 1480 -630 1640 -630 {lab=vgp}
 N 1640 -630 1640 -580 {lab=vgp}
 N 1640 -580 1660 -580 {lab=vgp}
 N 1540 -650 1700 -650 {lab=VDD}
-N 1620 -190 1700 -190 {lab=VSS}
 N 1700 -260 1700 -190 {lab=VSS}
 N 1480 -210 1640 -210 {lab=vgn}
 N 1640 -260 1640 -210 {lab=vgn}
@@ -87,7 +84,6 @@ N 1640 -630 1800 -630 {lab=vgp}
 N 1800 -630 1800 -580 {lab=vgp}
 N 1800 -580 1820 -580 {lab=vgp}
 N 1700 -650 1860 -650 {lab=VDD}
-N 1780 -190 1860 -190 {lab=VSS}
 N 1860 -260 1860 -190 {lab=VSS}
 N 1640 -210 1800 -210 {lab=vgn}
 N 1800 -260 1800 -210 {lab=vgn}
@@ -144,16 +140,13 @@ N 2180 -550 2180 -460 {lab=#net24}
 N 2070 -420 2130 -420 {lab=#net25}
 N 2020 -380 2020 -290 {lab=#net26}
 N 2180 -380 2180 -290 {lab=#net27}
-N 810 -340 2250 -340 {lab=ro_out}
 N 1910 -420 1970 -420 {lab=#net28}
 N 1960 -210 2120 -210 {lab=vgn}
 N 1960 -260 1960 -210 {lab=vgn}
 N 1800 -210 1960 -210 {lab=vgn}
 N 1960 -630 1960 -580 {lab=vgp}
 N 1800 -630 1960 -630 {lab=vgp}
-N 2250 -420 2250 -340 {lab=ro_out}
-N 2230 -420 2250 -420 {lab=ro_out}
-N 620 -400 620 -350 {lab=VDD}
+N 2280 -420 2340 -420 {lab=ro_out}
 N 250 -410 250 -390 {lab=VDD}
 N 620 -670 620 -650 {lab=VDD}
 N 250 -460 250 -440 {lab=VSS}
@@ -167,37 +160,18 @@ N 250 -440 440 -440 {lab=VSS}
 N 440 -440 440 -190 {lab=VSS}
 N 440 -190 620 -190 {lab=VSS}
 N 250 -190 440 -190 {lab=VSS}
-N 400 -400 620 -400 {lab=VDD}
-N 400 -410 400 -400 {lab=VDD}
-N 440 -450 620 -450 {lab=VSS}
-N 440 -450 440 -440 {lab=VSS}
-N 620 -500 620 -450 {lab=VSS}
-N 1300 -360 1300 -190 {lab=VSS}
-N 980 -190 1060 -190 {lab=VSS}
-N 1460 -360 1460 -190 {lab=VSS}
-N 1140 -190 1220 -190 {lab=VSS}
-N 1220 -190 1300 -190 {lab=VSS}
-N 1380 -190 1460 -190 {lab=VSS}
-N 1620 -360 1620 -190 {lab=VSS}
-N 1780 -360 1780 -190 {lab=VSS}
-N 1540 -190 1620 -190 {lab=VSS}
-N 1700 -190 1780 -190 {lab=VSS}
-N 1940 -360 1940 -190 {lab=VSS}
-N 2100 -360 2100 -190 {lab=VSS}
-N 1940 -190 2020 -190 {lab=VSS}
-N 2100 -190 2180 -190 {lab=VSS}
-N 1860 -190 1940 -190 {lab=VSS}
-N 2020 -190 2100 -190 {lab=VSS}
-N 2270 -360 2270 -190 {lab=VSS}
-N 2180 -190 2270 -190 {lab=VSS}
-N 1140 -360 1140 -190 {lab=VSS}
-N 1060 -190 1140 -190 {lab=VSS}
-N 980 -360 980 -190 {lab=VSS}
-N 900 -190 980 -190 {lab=VSS}
+N 620 -500 620 -440 {lab=VSS}
+N 1220 -190 1380 -190 {lab=VSS}
+N 1380 -190 1540 -190 {lab=VSS}
+N 1540 -190 1700 -190 {lab=VSS}
+N 1700 -190 1860 -190 {lab=VSS}
+N 1860 -190 2020 -190 {lab=VSS}
+N 2020 -190 2180 -190 {lab=VSS}
+N 1060 -190 1220 -190 {lab=VSS}
+N 900 -190 1060 -190 {lab=VSS}
 N 2340 -420 2420 -420 {lab=ro_out}
 N 530 -220 680 -220 {lab=ENN}
 N 2340 -540 2340 -420 {lab=ro_out}
-N 2250 -420 2340 -420 {lab=ro_out}
 N 2340 -650 2340 -570 {lab=VDD}
 N 2180 -650 2340 -650 {lab=VDD}
 N 650 -670 650 -620 {lab=ENP}
@@ -205,6 +179,12 @@ N 530 -620 650 -620 {lab=ENP}
 N 650 -670 2280 -670 {lab=ENP}
 N 2280 -670 2280 -570 {lab=ENP}
 N 2280 -570 2300 -570 {lab=ENP}
+N 810 -340 2280 -340 {lab=ro_out}
+N 2280 -420 2280 -340 {lab=ro_out}
+N 2230 -420 2280 -420 {lab=ro_out}
+N 440 -440 620 -440 {lab=VSS}
+N 400 -410 620 -410 {lab=VDD}
+N 620 -410 620 -350 {lab=VDD}
 C {sg13cmos5l_pr/sg13_lv_pmos.sym} 880 -580 0 0 {name=M1
 l=\{lstarv\}
 w=1.5u
@@ -351,13 +331,13 @@ m=1
 model=sg13_lv_nmos
 spiceprefix=X
 }
-C {analog/inverter/inverter.sym} 850 -420 0 0 {name=x1 wp=1.12u wn=0.74u}
-C {analog/inverter/inverter.sym} 1010 -420 0 0 {name=x2 wp=1.12u wn=0.74u}
-C {analog/inverter/inverter.sym} 1170 -420 0 0 {name=x3 wp=1.12u wn=0.74u}
-C {analog/inverter/inverter.sym} 1330 -420 0 0 {name=x4 wp=1.12u wn=0.74u}
-C {analog/inverter/inverter.sym} 1490 -420 0 0 {name=x5 wp=1.12u wn=0.74u}
-C {analog/inverter/inverter.sym} 1650 -420 0 0 {name=x6 wp=1.12u wn=0.74u}
-C {analog/inverter/inverter.sym} 1810 -420 0 0 {name=x7 wp=1.12u wn=0.74u}
+C {TSENSE8490-main/schematic/xschem/analog/inverter/inverter.sym} 850 -420 0 0 {name=x1 wp=1.12u wn=0.74u}
+C {TSENSE8490-main/schematic/xschem/analog/inverter/inverter.sym} 1010 -420 0 0 {name=x2 wp=1.12u wn=0.74u}
+C {TSENSE8490-main/schematic/xschem/analog/inverter/inverter.sym} 1170 -420 0 0 {name=x3 wp=1.12u wn=0.74u}
+C {TSENSE8490-main/schematic/xschem/analog/inverter/inverter.sym} 1330 -420 0 0 {name=x4 wp=1.12u wn=0.74u}
+C {TSENSE8490-main/schematic/xschem/analog/inverter/inverter.sym} 1490 -420 0 0 {name=x5 wp=1.12u wn=0.74u}
+C {TSENSE8490-main/schematic/xschem/analog/inverter/inverter.sym} 1650 -420 0 0 {name=x6 wp=1.12u wn=0.74u}
+C {TSENSE8490-main/schematic/xschem/analog/inverter/inverter.sym} 1810 -420 0 0 {name=x7 wp=1.12u wn=0.74u}
 C {sg13cmos5l_pr/sg13_lv_pmos.sym} 600 -500 0 0 {name=M2
 l=0.13u
 w=1u
@@ -414,41 +394,6 @@ b=0
 m=1
 value="expr_eng(  ( 9.0e-6 / @w + 7.0 * ( (@b + 1)* @l + ( 1.081*( @w + 1.0e-8 ) + 0.18e-6 )*@b ) / ( @w + 1.0e-8 ) ) / @m  )"
 }
-C {capa.sym} 980 -390 0 0 {name=C1
-m=1
-value=\{cpar\}
-footprint=1206
-device="ceramic capacitor"}
-C {capa.sym} 1140 -390 0 0 {name=C2
-m=1
-value=\{cpar\}
-footprint=1206
-device="ceramic capacitor"}
-C {capa.sym} 1300 -390 0 0 {name=C3
-m=1
-value=\{cpar\}
-footprint=1206
-device="ceramic capacitor"}
-C {capa.sym} 1460 -390 0 0 {name=C4
-m=1
-value=\{cpar\}
-footprint=1206
-device="ceramic capacitor"}
-C {capa.sym} 1620 -390 0 0 {name=C5
-m=1
-value=\{cpar\}
-footprint=1206
-device="ceramic capacitor"}
-C {capa.sym} 1780 -390 0 0 {name=C6
-m=1
-value=\{cpar\}
-footprint=1206
-device="ceramic capacitor"}
-C {capa.sym} 1940 -390 0 0 {name=C7
-m=1
-value=\{cpar\}
-footprint=1206
-device="ceramic capacitor"}
 C {sg13cmos5l_pr/sg13_lv_pmos.sym} 2000 -580 0 0 {name=M6
 l=\{lstarv\}
 w=1.5u
@@ -481,18 +426,8 @@ m=1
 model=sg13_lv_nmos
 spiceprefix=X
 }
-C {analog/inverter/inverter.sym} 1970 -420 0 0 {name=x8 wp=1.12u wn=0.74u}
-C {analog/inverter/inverter.sym} 2130 -420 0 0 {name=x9 wp=1.12u wn=0.74u}
-C {capa.sym} 2100 -390 0 0 {name=C8
-m=1
-value=\{cpar\}
-footprint=1206
-device="ceramic capacitor"}
-C {capa.sym} 2270 -390 0 0 {name=C9
-m=1
-value=\{cpar\}
-footprint=1206
-device="ceramic capacitor"}
+C {TSENSE8490-main/schematic/xschem/analog/inverter/inverter.sym} 1970 -420 0 0 {name=x8 wp=1.12u wn=0.74u}
+C {TSENSE8490-main/schematic/xschem/analog/inverter/inverter.sym} 2130 -420 0 0 {name=x9 wp=1.12u wn=0.74u}
 C {opin.sym} 2420 -420 0 0 {name=p2 lab=ro_out sim_pinnumber=3}
 C {iopin.sym} 250 -670 2 0 {name=p3 lab=VDD sim_pinnumber=4}
 C {iopin.sym} 250 -190 2 0 {name=p6 lab=VSS sim_pinnumber=5}
