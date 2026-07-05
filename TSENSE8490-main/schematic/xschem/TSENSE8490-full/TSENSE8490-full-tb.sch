@@ -201,7 +201,7 @@ value="
 .csparam vth=\{vdd/2\}
 .control
 
-set rawfile = octs-full-tb.raw
+set rawfile = TSENSE8490-full-tb.raw
 
 tran 0.05n 2.5u
 
@@ -243,7 +243,7 @@ C {vdd.sym} 120 -150 0 0 {name=l10 lab=VDD}
 C {lab_pin.sym} 670 -400 1 0 {name=p7 sig_type=std_logic lab=ro_raw}
 C {vdd.sym} 370 -440 0 0 {name=l2 lab=VDD}
 C {gnd.sym} 370 -360 0 0 {name=l4 lab=0}
-C {analog/temp-sens-core/temp_sens_core.sym} 500 -410 0 0 {name=x1 lstarv=0.46u cpar=0f}
+C {TSENSE8490-main/schematic/xschem/analog/temp-sens-core/temp_sens_core.sym} 500 -410 0 0 {name=x1 lstarv=0.46u cpar=0f}
 C {gnd.sym} 430 -70 0 0 {name=l5 lab=0}
 C {sg13cmos5l_pr/sg13_lv_nmos.sym} 520 -140 0 0 {name=M6
 l=0.13u
@@ -271,7 +271,7 @@ value=0.1f
 footprint=1206
 device="ceramic capacitor"}
 C {gnd.sym} 690 -70 0 0 {name=l8 lab=0}
-C {analog/output_buffer_chain/output_buffer_chain.sym} 600 -280 0 0 {name=x2}
+C {TSENSE8490-main/schematic/xschem/analog/output_buffer_chain/output_buffer_chain.sym} 600 -280 0 0 {name=x2}
 C {gnd.sym} 760 -360 0 0 {name=l11 lab=0}
 C {vdd.sym} 760 -440 0 0 {name=l14 lab=VDD}
 C {gnd.sym} 920 -340 0 0 {name=l13 lab=0}
@@ -325,7 +325,7 @@ value="
 .param vdd=1.2
 .csparam vth=\{vdd/2\}
 .control
-*set rawfile = octs-full-tb.raw
+*set rawfile = TSENSE8490-full-tb.raw
 
 tran 0.05n 1.25u
 
@@ -385,7 +385,7 @@ value="
 ** ngr_out f_raw f_buf f_q0 f_q1 f_q2 f_q3
 ** ngr_temp 25
 ** ngr_runs 100
-** ngr_name octs-full-tb-mc-mismatch-25c
+** ngr_name TSENSE8490-full-tb-mc-mismatch-25c
 ** ngr_param vdd 1.2
 
 .option rshunt=1e12
@@ -431,7 +431,7 @@ write $rawfile en en_n ro_raw ro_buf q0 q1 q2 q3
 .endc
 "
 spice_ignore=true}
-C {digital/div16/xschem/div16.sym} 1040 -360 0 0 {name=x3}
+C {TSENSE8490-main/schematic/xschem/digital/div16/xschem/div16.sym} 1040 -360 0 0 {name=x3}
 C {simulator_commands.sym} 390 -650 0 0 {name=mc-mm-stat-pvt
 simulator=ngspice
 only_toplevel=false 
@@ -449,7 +449,7 @@ value="
 ** ngr_out f_raw f_buf f_q0 f_q1 f_q2 f_q3 ivdd
 ** ngr_temp -20 25 80 120 140
 ** ngr_runs 20
-** ngr_name octs-full-tb-mc-mm-stat-pvt
+** ngr_name TSENSE8490-full-tb-mc-mm-stat-pvt
 ** ngr_param vdd 1.08 1.2 1.32
 
 .option rshunt=1e12
@@ -514,7 +514,7 @@ value="
 ** ngr_out f_raw f_buf f_q0 f_q1 f_q2 f_q3
 ** ngr_temp -20 25 80 120 140
 ** ngr_runs 100
-** ngr_name octs-full-tb-mc-stat-tsweep
+** ngr_name TSENSE8490-full-tb-mc-stat-tsweep
 ** ngr_param vdd 1.2
 
 .option rshunt=1e12
@@ -577,7 +577,7 @@ value="
 ** ngr_out f_raw f_buf f_q0 f_q1 f_q2 f_q3
 ** ngr_temp -20 25 80 120 140
 ** ngr_runs 50
-** ngr_name octs-full-tb-mc-mm-stat-vt
+** ngr_name TSENSE8490-full-tb-mc-mm-stat-vt
 ** ngr_param vdd 1.08 1.2 1.32
 
 .option rshunt=1e12
@@ -651,7 +651,7 @@ value="
 ** ngr_out f_raw f_buf f_q0 f_q1 f_q2 f_q3
 ** ngr_temp 25
 ** ngr_runs 100
-** ngr_name octs-full-tb-mc-mismatch-25c
+** ngr_name TSENSE8490-full-tb-mc-mismatch-25c
 ** ngr_param vdd 1.2
 
 .option rshunt=1e12
