@@ -38,7 +38,7 @@ spice_sym_def="
 .subckt sg13cmos5l_dlygate4sd3_1 X A VDD VSS
 .ends
 
-.subckt div16 VGND VPWR clk_in meas_en q0 q1 q2 q3
+.subckt div16 VDD VSS CLK EN Q0 Q1 Q2 Q3
 XFILLER_0_35 VPWR VGND sg13cmos5l_decap_8
 XFILLER_3_45 VPWR VGND sg13cmos5l_decap_8
 XFILLER_0_14 VPWR VGND sg13cmos5l_decap_8
@@ -129,21 +129,21 @@ L 4 80 -40 100 -40 {}
 L 4 80 -20 100 -20 {}
 L 4 80 0 100 0 {}
 B 4 -80 -70 80 10 {fill=0}
-B 5 -102.5 -2.5 -97.5 2.5 {name=VGND
+B 5 -102.5 -2.5 -97.5 2.5 {name=VSS
 dir=inout}
-B 5 -102.5 -62.5 -97.5 -57.5 {name=VPWR
+B 5 -102.5 -62.5 -97.5 -57.5 {name=VDD
 dir=inout}
-B 5 -102.5 -42.5 -97.5 -37.5 {name=clk_in
+B 5 -102.5 -42.5 -97.5 -37.5 {name=CLK
 dir=in}
-B 5 -102.5 -22.5 -97.5 -17.5 {name=meas_en
+B 5 -102.5 -22.5 -97.5 -17.5 {name=EN
 dir=in}
-B 5 97.5 -62.5 102.5 -57.5 {name=q0
+B 5 97.5 -62.5 102.5 -57.5 {name=Q0
 dir=out}
-B 5 97.5 -42.5 102.5 -37.5 {name=q1
+B 5 97.5 -42.5 102.5 -37.5 {name=Q1
 dir=out}
-B 5 97.5 -22.5 102.5 -17.5 {name=q2
+B 5 97.5 -22.5 102.5 -17.5 {name=Q2
 dir=out}
-B 5 97.5 -2.5 102.5 2.5 {name=q3
+B 5 97.5 -2.5 102.5 2.5 {name=Q3
 dir=out}
 T {VDD} -67.5 -62.5 0 0 0.1 0.1 {}
 T {VSS} -67.5 -2.5 0 0 0.1 0.1 {}

@@ -13,14 +13,12 @@ N 1030 -970 1120 -970 {lab=pad_q2}
 N 540 -990 540 -940 {lab=pad_ro_raw}
 N 490 -990 540 -990 {lab=pad_ro_raw}
 N 730 -990 830 -990 {lab=pad_ro_buf}
-N 830 -1140 1190 -1140 {lab=pad_vdd}
 N 250 -1140 250 -1020 {lab=pad_vdd}
 N 240 -1140 250 -1140 {lab=pad_vdd}
 N 630 -1140 630 -1030 {lab=pad_vdd}
 N 400 -1140 630 -1140 {lab=pad_vdd}
 N 830 -1140 830 -1010 {lab=pad_vdd}
 N 630 -1140 830 -1140 {lab=pad_vdd}
-N 830 -780 1190 -780 {lab=pad_vss}
 N 400 -780 400 -760 {lab=pad_vss}
 N 250 -780 400 -780 {lab=pad_vss}
 N 400 -1160 400 -1140 {lab=pad_vdd}
@@ -134,7 +132,7 @@ N 690 -990 730 -990 {lab=pad_ro_buf}
 N 240 -780 240 -760 {lab=pad_vss}
 N 130 -780 240 -780 {lab=pad_vss}
 C {TSENSE8490-main/schematic/xschem/analog/temp-sens-core/temp_sens_core.sym} 370 -1000 0 0 {name=x1 lstarv=0.46u}
-C {TSENSE8490-main/schematic/xschem/analog/output_buffer_chain/output_buffer_chain.sym} 470 -870 0 0 {name=x2}
+C {TSENSE8490-main/schematic/xschem/analog/buffer/buffer.sym} 470 -870 0 0 {name=x2}
 C {TSENSE8490-main/schematic/xschem/digital/div16/xschem/div16.sym} 930 -950 0 0 {name=x3}
 C {lab_pin.sym} 100 -490 0 0 {name=p13 sig_type=std_logic lab=pad_enp
 }
