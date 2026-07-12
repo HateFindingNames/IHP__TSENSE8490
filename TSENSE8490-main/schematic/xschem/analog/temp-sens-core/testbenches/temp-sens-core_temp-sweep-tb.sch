@@ -6,8 +6,8 @@ S {}
 F {}
 E {}
 B 2 310 -810 1110 -410 {flags=graph
-y1=1.8e+08
-y2=4.6e+08
+y1=55000000
+y2=2.2e+08
 ypos1=0
 ypos2=2
 divy=5
@@ -23,16 +23,17 @@ dataset=-1
 unitx=1
 logx=0
 logy=0
-sim_type=table
+sim_type=dc
 autoload=1
 hilight_wave=-1
 vlegend=0
 legend=1
 mode=Line
 color=4
-node=frequency
-hcursor1_y=2.4289826e+08
-rawfile=$netlist_dir/temp-sens-core_temp-sweep.raw}
+node=ro_freq
+rawfile=$netlist_dir/temp-sens-core_tsweep.raw
+sweep=temperature
+hcursor1_y=88608778}
 B 2 1130 -810 1930 -410 {flags=graph
 y1=-0.031
 y2=1.3
@@ -55,7 +56,7 @@ sim_type=tran
 autoload=1
 color=4
 node=tran5.v(ro_raw)
-rawfile=$netlist_dir/temp-sens-core_temp-sweep_temp25_wave.raw}
+rawfile=$netlist_dir/temp-sens-core_tsweep_temp25_wave.raw}
 B 2 1130 -1230 1930 -830 {flags=graph
 y1=0
 y2=1.3
@@ -81,7 +82,7 @@ sim_type=tran
 autoload=1
 sweep=time
 digital=1
-rawfile=$netlist_dir/temp-sens-core_temp-sweep_temp25_wave.raw}
+rawfile=$netlist_dir/temp-sens-core_tsweep_temp25_wave.raw}
 T {tcleval([
   xschem raw read "$netlist_dir/temp-sens-core_temp-sweep_temp25_wave"
   set v [xschem raw value f 0 0]
@@ -89,14 +90,6 @@ T {tcleval([
   return "tt/f = [to_eng $v]Hz"
 ])
 } 1137.5 -405 0 0 0.2 0.2 {floater=1}
-N 130 -120 130 -110 {lab=0}
-N 110 -110 130 -110 {lab=0}
-N 90 -120 90 -110 {lab=0}
-N 110 -110 110 -100 {lab=0}
-N 90 -110 110 -110 {lab=0}
-N 90 -190 90 -180 {lab=VDD}
-N 130 -190 130 -180 {lab=VDD}
-N 90 -190 130 -190 {lab=VDD}
 N 280 -190 280 -170 {lab=VDD}
 N 760 -180 770 -180 {lab=VDD}
 N 760 -190 760 -180 {lab=VDD}
@@ -146,22 +139,8 @@ set sim(spice,default) 0
 xschem netlist
 simulate
 "}
-C {sg13cmos5l_pr/ntap1.sym} 90 -150 2 0 {name=R3
-model=ntap1
-spiceprefix=X
-w=0.78e-6
-l=0.78e-6
-}
-C {sg13cmos5l_pr/ptap1.sym} 130 -150 0 0 {name=R4
-model=ptap1
-spiceprefix=X
-w=0.78e-6
-l=0.78e-6
-}
-C {gnd.sym} 110 -100 0 0 {name=l3 lab=0}
 C {gnd.sym} 280 -110 0 0 {name=l1 lab=0}
 C {vdd.sym} 280 -190 0 0 {name=l9 lab=VDD}
-C {vdd.sym} 110 -190 0 0 {name=l10 lab=VDD}
 C {lab_pin.sym} 1050 -150 2 0 {name=p7 sig_type=std_logic lab=ro_raw}
 C {simulator_commands.sym} 0 -660 0 0 {name=temp_sweep
 simulator=ngspice
@@ -177,6 +156,7 @@ value="
 *.param cpar=0
 *.param lstarv=0.18u
 .control
+
 let temp_start = -20
 let temp_stop = 140
 let temp_delta = 10
@@ -186,7 +166,7 @@ setplot new
 set scratch = $curplot
 
 compose temperature start=$&temp_start stop=$&temp_stop step=$&temp_delta
-let frequency = vector(length(temperature))
+let ro_freq = vector(length(temperature))
 
 let i = 0
 let tcur = temp_start
@@ -206,25 +186,28 @@ while tcur <= temp_stop
   setplot $scratch
 
   if tcur = 20
-    write temp-sens-core_temp-sweep_temp25_wave.raw \{$dt\}.time \{$dt\}.v(ro_raw) \{$dt\}.en \{$dt\}.en_n
-    let time25 = \{$dt\}.time
-    let f = 1/\{$dt\}.tperiod
-    print f
-    let ro_raw25 = \{$dt\}.v(ro_raw)
+    write temp-sens-core_tsweep_temp25_wave.raw \{$dt\}.time \{$dt\}.v(ro_raw) \{$dt\}.en \{$dt\}.en_n
+*    let time25 = \{$dt\}.time
+*    let f = 1/\{$dt\}.tperiod
+*    print f
+*    let ro_raw25 = \{$dt\}.v(ro_raw)
   end
 
-  let frequency[i] = 1/\{$dt\}.tperiod
+  let ro_freq[i] = 1/\{$dt\}.tperiod
   let tcur = tcur + temp_delta
   let i = i+1
 end
-
 setplot $scratch
 
-*settype temp-sweep temperature
-settype frequency frequency
-*setscale frequency temperature
-**write temp-sens-core_temp-sweep.raw temperature frequency
-write $rawfile temperature ro_raw en en_n frequency
+settype temp-sweep temperature
+settype frequency ro_freq
+setscale ro_freq temperature
+
+set curplotname='DC transfer characteristic'
+set curplottitle='frequency versus temperature'
+
+write temp-sens-core_tsweep.raw temperature ro_freq
+
 .endc
 "
 }
@@ -246,7 +229,7 @@ value="
 }
 C {vdd.sym} 760 -190 0 0 {name=l2 lab=VDD}
 C {gnd.sym} 760 -110 0 0 {name=l4 lab=0}
-C {analog/temp-sens-core/temp_sens_core.sym} 890 -160 0 0 {name=x1 lstarv=0.46u cpar=0f}
+C {TSENSE8490-main/schematic/xschem/analog/temp-sens-core/temp_sens_core.sym} 890 -160 0 0 {name=x1 lstarv=0.46u cpar=0f}
 C {lab_pin.sym} 390 -190 2 0 {name=p1 sig_type=std_logic lab=EN}
 C {gnd.sym} 390 -110 0 0 {name=l12 lab=0}
 C {lab_pin.sym} 560 -240 2 0 {name=p2 sig_type=std_logic lab=EN_n}
