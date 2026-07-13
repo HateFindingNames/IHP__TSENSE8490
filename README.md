@@ -2,9 +2,9 @@
 
 Single-technology IP library.
 
-- doc/     : user documentation
-- dependencies/ : sub-cells and blocks
-- release/v.1.0.0 : immutable versioned deliveries
+- doc/     : none
+- dependencies/ : none
+- release/v.1.0.0 : [TSENSE8490.gds](release/v.1.0.0/gds/TSENSE8490.gds)
 
 
 # Self-tought Mixed-Signal On-Chip Temperature Sensor
@@ -16,7 +16,7 @@ In this repository I host all design-files for my self-tought mixed-signal on-ch
 
 ## Layout
 
-![floorplan|400](TSENSE8490-main/layout/klayout/img/floorplan.svg)
+![TSENSE8490|400](TSENSE8490.svg)
 
 |                |                  |
 | ----------------| ------------------|
@@ -25,10 +25,6 @@ In this repository I host all design-files for my self-tought mixed-signal on-ch
 | **Top Cell**   | `TSENSE8490`     |
 | **Die Size**   | 1.0 mm × 1.0 mm  |
 | **License**    | Apache-2.0       |
-
-### Current Starved RO
-
-![current_starved_ro|400](TSENSE8490-main/layout/klayout/img/current_starved_ro.png)
 
 
 ## Sims
