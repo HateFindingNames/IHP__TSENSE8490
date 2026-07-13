@@ -11,7 +11,7 @@ Single-technology IP library.
 
 Welcome 👋
 
-In this repository I host all design-files for my self-tought mixed-signal on-chip temperature sensor.
+In this repository I host all design-files for a mixed-signal on-chip temperature sensor.
 
 
 ## Layout
