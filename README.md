@@ -7,7 +7,7 @@ Single-technology IP library.
 - release/v.1.0.0 : [TSENSE8490.gds](release/v.1.0.0/gds/TSENSE8490.gds)
 
 
-# Self-tought Mixed-Signal On-Chip Temperature Sensor
+# Self-taught Mixed-Signal On-Chip Temperature Sensor
 
 Welcome 👋
 
