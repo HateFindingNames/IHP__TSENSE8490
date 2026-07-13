@@ -1,0 +1,14 @@
+# https://openlane.readthedocs.io/en/2023.09.07/reference/configuration.html
+
+DESIGN_NAME: div16
+VERILOG_FILES: dir::src/div16.sv
+CLOCK_PORT: clk_in
+CLOCK_PERIOD: 2.5 # = 400MHz
+
+USE_SLANG: true
+
+PDK: ihp-sg13cmos5l
+
+FP_SIZING: absolute # Whether to use relative sizing by making use of FP_CORE_UTIL or absolute one using DIE_AREA.
+DIE_AREA: [0, 0, 40, 40] # Specific die area to be used in floorplanning when FP_SIZING is set to absolute. Specified as a 4-corner rectangle “x0 y0 x1 y1”. Units in μm
+CORE_AREA: [5, 5, 35, 35] # Specific core area (i.e. die area minus margins).

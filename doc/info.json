@@ -15,8 +15,8 @@
   "top_cell_name": "TSENSE8490",
   "release": {
     "version": "v.1.0.0",
-    "gds": "release/v.1.0.0/gds",
-    "netlist": "release/v.1.0.0/netlist",
+    "gds": "release/v.1.0.0/gds/TSENSE8490.gds",
+    "netlist": "release/v.1.0.0/netlist/TSENSE8490.spice",
     "doc": "release/v.1.0.0/doc"
   }
 }

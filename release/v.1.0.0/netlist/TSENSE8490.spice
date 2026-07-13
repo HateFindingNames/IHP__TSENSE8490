@@ -1,215 +1,96 @@
-** sch_path: /foss/designs/TSENSE8490-main/schematic/xschem/TSENSE8490.sch
-.subckt TSENSE8490 pad_vdd pad_vss pad_enp pad_enn pad_ro_raw pad_ro_buf pad_q0 pad_q1 pad_q2 pad_q3
-*.PININFO pad_vdd:B pad_vss:B pad_enp:B pad_enn:B pad_ro_raw:B pad_ro_buf:B pad_q0:B pad_q1:B pad_q2:B pad_q3:B
-x1 pad_enp pad_enn pad_ro_raw pad_vdd pad_vss temp_sens_core
-x2 pad_ro_raw pad_ro_buf pad_vdd pad_vss output_buffer_chain
-x3 pad_vss pad_vdd pad_ro_buf pad_enn pad_q0 pad_q1 pad_q2 pad_q3 div16
-X4 pad_vdd bondpad
-X5 pad_vss bondpad
-X6 pad_enp bondpad
-X7 pad_enn bondpad
-X8 pad_ro_raw bondpad
-X9 pad_ro_buf bondpad
-X10 pad_q0 bondpad
-X11 pad_q1 bondpad
-X12 pad_q2 bondpad
-X13 pad_q3 bondpad
-DD1 pad_vdd pad_enp pad_vss diodevdd_4kv
-DD2 pad_vdd pad_enp pad_vss diodevss_4kv
-DD3 pad_vdd pad_enn pad_vss diodevdd_4kv
-DD4 pad_vdd pad_enn pad_vss diodevss_4kv
-DD5 pad_vdd pad_ro_raw pad_vss diodevdd_4kv
-DD6 pad_vdd pad_ro_raw pad_vss diodevss_4kv
-DD7 pad_vdd pad_ro_buf pad_vss diodevdd_4kv
-DD8 pad_vdd pad_ro_buf pad_vss diodevss_4kv
-DD9 pad_vdd pad_q0 pad_vss diodevdd_4kv
-DD10 pad_vdd pad_q0 pad_vss diodevss_4kv
-DD11 pad_vdd pad_q1 pad_vss diodevdd_4kv
-DD12 pad_vdd pad_q1 pad_vss diodevss_4kv
-DD13 pad_vdd pad_q2 pad_vss diodevdd_4kv
-DD14 pad_vdd pad_q2 pad_vss diodevss_4kv
-DD15 pad_vdd pad_q3 pad_vss diodevdd_4kv
-DD16 pad_vdd pad_q3 pad_vss diodevss_4kv
+** sch_path: /foss/designs/TSENSE8490-main/schematic/xschem/lvs-view/TSENSE8490.sch
+.subckt TSENSE8490 ENN ENP Q0 Q1 Q2 Q3 RO_BUF RO_RAW VDD VSS
+*.PININFO ENP:B ENN:B RO_RAW:B RO_BUF:B Q0:B Q1:B Q2:B Q3:B
+x3 VDD VSS RO_BUF ENN Q0 Q1 Q2 Q3
+X4 VDD bondpad
+X5 VSS bondpad
+X6 ENP bondpad
+X7 ENN bondpad
+X8 RO_RAW bondpad
+X9 RO_BUF bondpad
+X10 Q0 bondpad
+X11 Q1 bondpad
+X12 Q2 bondpad
+X13 Q3 bondpad
+DD1 VDD ENP VSS diodevdd_4kv
+DD2 VDD ENP VSS diodevss_4kv
+DD3 VDD ENN VSS diodevdd_4kv
+DD4 VDD ENN VSS diodevss_4kv
+DD5 VDD RO_RAW VSS diodevdd_4kv
+DD6 VDD RO_RAW VSS diodevss_4kv
+DD7 VDD RO_BUF VSS diodevdd_4kv
+DD8 VDD RO_BUF VSS diodevss_4kv
+DD9 VDD Q0 VSS diodevdd_4kv
+DD10 VDD Q0 VSS diodevss_4kv
+DD11 VDD Q1 VSS diodevdd_4kv
+DD12 VDD Q1 VSS diodevss_4kv
+DD13 VDD Q2 VSS diodevdd_4kv
+DD14 VDD Q2 VSS diodevss_4kv
+DD15 VDD Q3 VSS diodevdd_4kv
+DD16 VDD Q3 VSS diodevss_4kv
+MM1 net13 net1 VDD VDD sg13_lv_pmos w=1.5u l=0.46u ng=1
+MM21 net1 ENP VDD VDD sg13_lv_pmos w=10u l=0.13u ng=1
+MM22 net2 ENN VSS VSS sg13_lv_nmos w=10u l=0.13u ng=1
+MM23 net1 net1 VDD VDD sg13_lv_pmos w=1.5u l=0.46u ng=1
+MM24 net2 net2 VSS VSS sg13_lv_nmos w=1.5u l=0.46u ng=1
+MM4 net22 net2 VSS VSS sg13_lv_nmos w=1.5u l=0.46u ng=1
+MM5 net14 net1 VDD VDD sg13_lv_pmos w=1.5u l=0.46u ng=1
+MM8 net23 net2 VSS VSS sg13_lv_nmos w=1.5u l=0.46u ng=1
+MM9 net15 net1 VDD VDD sg13_lv_pmos w=1.5u l=0.46u ng=1
+MM12 net24 net2 VSS VSS sg13_lv_nmos w=1.5u l=0.46u ng=1
+MM13 net16 net1 VDD VDD sg13_lv_pmos w=1.5u l=0.46u ng=1
+MM16 net25 net2 VSS VSS sg13_lv_nmos w=1.5u l=0.46u ng=1
+MM17 net17 net1 VDD VDD sg13_lv_pmos w=1.5u l=0.46u ng=1
+MM20 net26 net2 VSS VSS sg13_lv_nmos w=1.5u l=0.46u ng=1
+MM25 net18 net1 VDD VDD sg13_lv_pmos w=1.5u l=0.46u ng=1
+MM28 net27 net2 VSS VSS sg13_lv_nmos w=1.5u l=0.46u ng=1
+MM29 net19 net1 VDD VDD sg13_lv_pmos w=1.5u l=0.46u ng=1
+MM32 net28 net2 VSS VSS sg13_lv_nmos w=1.5u l=0.46u ng=1
+MM2 VSS net3 net1 VDD sg13_lv_pmos w=1u l=0.13u ng=1
+MM3 VDD net4 net2 VSS sg13_lv_nmos w=1u l=0.13u ng=1
+RR6 VDD net3 1.047k $SUB=sub! $[rsil] w=0.5e-6 l=75e-6
+RR7 net3 VSS 155.3 $SUB=sub! $[rsil] w=0.5e-6 l=10e-6
+RR1 net4 VSS 1.047k $SUB=sub! $[rsil] w=0.5e-6 l=75e-6
+RR2 VDD net4 155.3 $SUB=sub! $[rsil] w=0.5e-6 l=10e-6
+MM6 net20 net1 VDD VDD sg13_lv_pmos w=1.5u l=0.46u ng=1
+MM7 net29 net2 VSS VSS sg13_lv_nmos w=1.5u l=0.46u ng=1
+MM10 net21 net1 VDD VDD sg13_lv_pmos w=1.5u l=0.46u ng=1
+MM11 net30 net2 VSS VSS sg13_lv_nmos w=1.5u l=0.46u ng=1
+MM14 RO_RAW ENP VDD VDD sg13_lv_pmos w=0.3u l=0.13u ng=1
+MM15 net5 RO_RAW net22 VSS sg13_lv_nmos w=0.74u l=0.13u ng=1
+MM18 net13 RO_RAW net5 VDD sg13_lv_pmos w=1.12u l=0.13u ng=1
+MM19 net6 net5 net23 VSS sg13_lv_nmos w=0.74u l=0.13u ng=1
+MM26 net14 net5 net6 VDD sg13_lv_pmos w=1.12u l=0.13u ng=1
+MM27 net7 net6 net24 VSS sg13_lv_nmos w=0.74u l=0.13u ng=1
+MM30 net15 net6 net7 VDD sg13_lv_pmos w=1.12u l=0.13u ng=1
+MM31 net8 net7 net25 VSS sg13_lv_nmos w=0.74u l=0.13u ng=1
+MM33 net16 net7 net8 VDD sg13_lv_pmos w=1.12u l=0.13u ng=1
+MM34 net9 net8 net26 VSS sg13_lv_nmos w=0.74u l=0.13u ng=1
+MM35 net17 net8 net9 VDD sg13_lv_pmos w=1.12u l=0.13u ng=1
+MM36 net10 net9 net27 VSS sg13_lv_nmos w=0.74u l=0.13u ng=1
+MM37 net18 net9 net10 VDD sg13_lv_pmos w=1.12u l=0.13u ng=1
+MM38 net11 net10 net28 VSS sg13_lv_nmos w=0.74u l=0.13u ng=1
+MM39 net19 net10 net11 VDD sg13_lv_pmos w=1.12u l=0.13u ng=1
+MM40 net12 net11 net29 VSS sg13_lv_nmos w=0.74u l=0.13u ng=1
+MM41 net20 net11 net12 VDD sg13_lv_pmos w=1.12u l=0.13u ng=1
+MM42 RO_RAW net12 net30 VSS sg13_lv_nmos w=0.74u l=0.13u ng=1
+MM43 net21 net12 RO_RAW VDD sg13_lv_pmos w=1.12u l=0.13u ng=1
+MM44 net31 RO_RAW VSS VSS sg13_lv_nmos w=2.0u l=0.45u ng=1
+MM45 VDD RO_RAW net31 VDD sg13_lv_pmos w=1.0u l=0.45u ng=1
+MM46 net32 net31 VSS VSS sg13_lv_nmos w=3.99u l=0.45u ng=3
+MM47 VDD net31 net32 VDD sg13_lv_pmos w=2.0u l=0.45u ng=1
+MM48 RO_BUF net32 VSS VSS sg13_lv_nmos w=16.0u l=0.45u ng=5
+MM49 VDD net32 RO_BUF VDD sg13_lv_pmos w=7.995u l=0.45u ng=3
+RR3 VSS sub! ptap1 A=6.084e-13 P=3.12e-06
 .ends
-
-* expanding   symbol:  TSENSE8490-main/schematic/xschem/analog/temp-sens-core/temp_sens_core.sym # of pins=5
-** sym_path: /foss/designs/TSENSE8490-main/schematic/xschem/analog/temp-sens-core/temp_sens_core.sym
-** sch_path: /foss/designs/TSENSE8490-main/schematic/xschem/analog/temp-sens-core/temp_sens_core.sch
-.subckt temp_sens_core ENP ENN ro_out VDD VSS  lstarv=0.13u cpar=0
-*.PININFO ro_out:O VDD:B VSS:B ENP:I ENN:I
-MM1 net1 vgp VDD VDD sg13_lv_pmos w=1.5u l={lstarv} ng=1
-MM21 vgp ENP VDD VDD sg13_lv_pmos w=10u l=0.13u ng=1
-MM22 vgn ENN VSS VSS sg13_lv_nmos w=10u l=0.13u ng=1
-MM23 vgp vgp VDD VDD sg13_lv_pmos w=1.5u l={lstarv} ng=1
-MM24 vgn vgn VSS VSS sg13_lv_nmos w=1.5u l={lstarv} ng=1
-MM4 net8 vgn VSS VSS sg13_lv_nmos w=1.5u l={lstarv} ng=1
-MM5 net2 vgp VDD VDD sg13_lv_pmos w=1.5u l={lstarv} ng=1
-MM8 net11 vgn VSS VSS sg13_lv_nmos w=1.5u l={lstarv} ng=1
-MM9 net3 vgp VDD VDD sg13_lv_pmos w=1.5u l={lstarv} ng=1
-MM12 net13 vgn VSS VSS sg13_lv_nmos w=1.5u l={lstarv} ng=1
-MM13 net4 vgp VDD VDD sg13_lv_pmos w=1.5u l={lstarv} ng=1
-MM16 net15 vgn VSS VSS sg13_lv_nmos w=1.5u l={lstarv} ng=1
-MM17 net5 vgp VDD VDD sg13_lv_pmos w=1.5u l={lstarv} ng=1
-MM20 net16 vgn VSS VSS sg13_lv_nmos w=1.5u l={lstarv} ng=1
-MM25 net6 vgp VDD VDD sg13_lv_pmos w=1.5u l={lstarv} ng=1
-MM28 net18 vgn VSS VSS sg13_lv_nmos w=1.5u l={lstarv} ng=1
-MM29 net7 vgp VDD VDD sg13_lv_pmos w=1.5u l={lstarv} ng=1
-MM32 net19 vgn VSS VSS sg13_lv_nmos w=1.5u l={lstarv} ng=1
-x1 net1 ro_out net9 net8 inverter wp=1.12u wn=0.74u
-x2 net2 net9 net10 net11 inverter wp=1.12u wn=0.74u
-x3 net3 net10 net12 net13 inverter wp=1.12u wn=0.74u
-x4 net4 net12 net14 net15 inverter wp=1.12u wn=0.74u
-x5 net5 net14 net22 net16 inverter wp=1.12u wn=0.74u
-x6 net6 net22 net17 net18 inverter wp=1.12u wn=0.74u
-x7 net7 net17 net28 net19 inverter wp=1.12u wn=0.74u
-MM2 VSS net20 vgp VSS sg13_lv_pmos w=1u l=0.13u ng=1
-MM3 VDD net21 vgn VDD sg13_lv_nmos w=1u l=0.13u ng=1
-RR6 VDD net20 1.047k $SUB=sub! $[rsil] w=0.5e-6 l=75e-6
-RR7 net20 VSS 155.3 $SUB=sub! $[rsil] w=0.5e-6 l=10e-6
-RR1 net21 VSS 1.047k $SUB=sub! $[rsil] w=0.5e-6 l=75e-6
-RR2 VDD net21 155.3 $SUB=sub! $[rsil] w=0.5e-6 l=10e-6
-MM6 net23 vgp VDD VDD sg13_lv_pmos w=1.5u l={lstarv} ng=1
-MM7 net26 vgn VSS VSS sg13_lv_nmos w=1.5u l={lstarv} ng=1
-MM10 net24 vgp VDD VDD sg13_lv_pmos w=1.5u l={lstarv} ng=1
-MM11 net27 vgn VSS VSS sg13_lv_nmos w=1.5u l={lstarv} ng=1
-x8 net23 net28 net25 net26 inverter wp=1.12u wn=0.74u
-x9 net24 net25 ro_out net27 inverter wp=1.12u wn=0.74u
-MM14 ro_out ENP VDD VDD sg13_lv_pmos w=0.3u l=0.13u ng=1
-.ends
-
-
-* expanding   symbol:  TSENSE8490-main/schematic/xschem/analog/output_buffer_chain/output_buffer_chain.sym # of pins=4
-** sym_path: /foss/designs/TSENSE8490-main/schematic/xschem/analog/output_buffer_chain/output_buffer_chain.sym
-** sch_path: /foss/designs/TSENSE8490-main/schematic/xschem/analog/output_buffer_chain/output_buffer_chain.sch
-.subckt output_buffer_chain IN OUT VDD VSS
-*.PININFO IN:I OUT:O VSS:B VDD:B
-MM1 net1 IN VSS VSS sg13_lv_nmos w=2.0u l=0.45u ng=1
-MM2 VDD IN net1 VDD sg13_lv_pmos w=1.0u l=0.45u ng=1
-MM3 net2 net1 VSS VSS sg13_lv_nmos w=4.0u l=0.45u ng=1
-MM4 VDD net1 net2 VDD sg13_lv_pmos w=2.0u l=0.45u ng=1
-MM5 OUT net2 VSS VSS sg13_lv_nmos w=16.0u l=0.45u ng=2
-MM6 VDD net2 OUT VDD sg13_lv_pmos w=8.0u l=0.45u ng=1
-.ends
-
 
 * expanding   symbol:  TSENSE8490-main/schematic/xschem/digital/div16/xschem/div16.sym # of pins=8
 ** sym_path: /foss/designs/TSENSE8490-main/schematic/xschem/digital/div16/xschem/div16.sym
 
-* NGSPICE file created from div16.ext - technology: ihp-sg13cmos5l
 
-* Black-box entry subcircuit for sg13cmos5l_decap_8 abstract view
-.subckt sg13cmos5l_decap_8 VDD VSS
-.ends
-
-* Black-box entry subcircuit for sg13cmos5l_fill_2 abstract view
-.subckt sg13cmos5l_fill_2 VDD VSS
-.ends
-
-* Black-box entry subcircuit for sg13cmos5l_fill_1 abstract view
-.subckt sg13cmos5l_fill_1 VDD VSS
-.ends
-
-* Black-box entry subcircuit for sg13cmos5l_inv_1 abstract view
-.subckt sg13cmos5l_inv_1 Y A VDD VSS
-.ends
-
-* Black-box entry subcircuit for sg13cmos5l_decap_4 abstract view
-.subckt sg13cmos5l_decap_4 VDD VSS
-.ends
-
-* Black-box entry subcircuit for sg13cmos5l_buf_1 abstract view
-.subckt sg13cmos5l_buf_1 X A VDD VSS
-.ends
-
-* Black-box entry subcircuit for sg13cmos5l_dfrbpq_1 abstract view
-.subckt sg13cmos5l_dfrbpq_1 Q CLK D RESET_B VDD VSS
-.ends
-
-* Black-box entry subcircuit for sg13cmos5l_dlygate4sd3_1 abstract view
-.subckt sg13cmos5l_dlygate4sd3_1 X A VDD VSS
-.ends
-
-.subckt div16 VGND VPWR clk_in meas_en q0 q1 q2 q3
-XFILLER_0_35 VPWR VGND sg13cmos5l_decap_8
-XFILLER_3_45 VPWR VGND sg13cmos5l_decap_8
-XFILLER_0_14 VPWR VGND sg13cmos5l_decap_8
-XFILLER_6_35 VPWR VGND sg13cmos5l_decap_8
-XFILLER_6_46 VPWR VGND sg13cmos5l_fill_2
-XFILLER_1_0 VPWR VGND sg13cmos5l_decap_8
-XFILLER_3_59 VPWR VGND sg13cmos5l_fill_2
-XFILLER_6_14 VPWR VGND sg13cmos5l_decap_8
-XFILLER_0_28 VPWR VGND sg13cmos5l_decap_8
-XFILLER_0_49 VPWR VGND sg13cmos5l_decap_8
-XFILLER_3_38 VPWR VGND sg13cmos5l_decap_8
-XFILLER_5_8 VPWR VGND sg13cmos5l_decap_8
-XFILLER_6_59 VPWR VGND sg13cmos5l_fill_2
-XFILLER_1_60 VPWR VGND sg13cmos5l_fill_1
-XFILLER_6_28 VPWR VGND sg13cmos5l_decap_8
-X_08_ _08_/Y _15_/A VPWR VGND sg13cmos5l_inv_1
-X_09_ _09_/Y _15_/A VPWR VGND sg13cmos5l_inv_1
-XFILLER_4_52 VPWR VGND sg13cmos5l_decap_4
-XFILLER_1_21 VPWR VGND sg13cmos5l_decap_8
-XFILLER_1_7 VPWR VGND sg13cmos5l_decap_8
-XFILLER_4_45 VPWR VGND sg13cmos5l_decap_4
-XFILLER_4_56 VPWR VGND sg13cmos5l_fill_1
-XFILLER_6_0 VPWR VGND sg13cmos5l_decap_8
-Xinput1 _15_/A meas_en VPWR VGND sg13cmos5l_buf_1
-XFILLER_1_14 VPWR VGND sg13cmos5l_decap_8
-XFILLER_1_58 VPWR VGND sg13cmos5l_fill_2
-XFILLER_4_14 VPWR VGND sg13cmos5l_decap_4
-XFILLER_4_0 VPWR VGND sg13cmos5l_decap_8
-XFILLER_2_0 VPWR VGND sg13cmos5l_decap_8
-XFILLER_2_52 VPWR VGND sg13cmos5l_decap_4
-XFILLER_6_7 VPWR VGND sg13cmos5l_decap_8
-XFILLER_2_42 VPWR VGND sg13cmos5l_fill_1
-XFILLER_5_30 VPWR VGND sg13cmos5l_decap_4
-XFILLER_0_0 VPWR VGND sg13cmos5l_decap_8
-XFILLER_2_21 VPWR VGND sg13cmos5l_decap_8
-XFILLER_4_7 VPWR VGND sg13cmos5l_decap_8
-XFILLER_5_22 VPWR VGND sg13cmos5l_decap_4
-X_19_ _19_/Q _18_/Q _19_/D _10_/Y VPWR VGND sg13cmos5l_dfrbpq_1
-XFILLER_2_56 VPWR VGND sg13cmos5l_fill_1
-X_18_ _18_/Q _17_/Q _18_/D _09_/Y VPWR VGND sg13cmos5l_dfrbpq_1
-XFILLER_2_35 VPWR VGND sg13cmos5l_decap_8
-X_17_ _17_/Q _16_/Q _17_/D _08_/Y VPWR VGND sg13cmos5l_dfrbpq_1
-XFILLER_2_14 VPWR VGND sg13cmos5l_decap_8
-XFILLER_2_7 VPWR VGND sg13cmos5l_decap_8
-X_16_ _16_/Q clk_in _16_/D _15_/Y VPWR VGND sg13cmos5l_dfrbpq_1
-Xhold6 _11_/A _16_/Q VPWR VGND sg13cmos5l_dlygate4sd3_1
-XFILLER_5_15 VPWR VGND sg13cmos5l_decap_4
-XFILLER_5_26 VPWR VGND sg13cmos5l_fill_1
-X_15_ _15_/Y _15_/A VPWR VGND sg13cmos5l_inv_1
-XFILLER_0_60 VPWR VGND sg13cmos5l_fill_1
-XFILLER_0_7 VPWR VGND sg13cmos5l_decap_8
-XFILLER_2_28 VPWR VGND sg13cmos5l_decap_4
-X_14_ _19_/D _19_/Q VPWR VGND sg13cmos5l_inv_1
-X_12_ _17_/D _17_/Q VPWR VGND sg13cmos5l_inv_1
-X_13_ _18_/D _18_/Q VPWR VGND sg13cmos5l_inv_1
-X_11_ _16_/D _11_/A VPWR VGND sg13cmos5l_inv_1
-XFILLER_0_42 VPWR VGND sg13cmos5l_decap_8
-XFILLER_3_52 VPWR VGND sg13cmos5l_decap_8
-X_10_ _10_/Y _15_/A VPWR VGND sg13cmos5l_inv_1
-Xoutput2 q0 _16_/Q VPWR VGND sg13cmos5l_buf_1
-XFILLER_0_21 VPWR VGND sg13cmos5l_decap_8
-XFILLER_6_52 VPWR VGND sg13cmos5l_decap_8
-Xoutput3 q1 _17_/Q VPWR VGND sg13cmos5l_buf_1
-XFILLER_6_21 VPWR VGND sg13cmos5l_decap_8
-XFILLER_6_42 VPWR VGND sg13cmos5l_decap_4
-Xoutput4 q2 _18_/Q VPWR VGND sg13cmos5l_buf_1
-XFILLER_0_56 VPWR VGND sg13cmos5l_decap_4
-XFILLER_3_0 VPWR VGND sg13cmos5l_fill_2
-Xoutput5 q3 _19_/Q VPWR VGND sg13cmos5l_buf_1
+* Black-box entry subcircuit for div16 abstract view
+.subckt div16 VDD VSS RO_BUF ENN Q0 Q1 Q2 Q3
 .ends
 
 
-
-
-* expanding   symbol:  TSENSE8490-main/schematic/xschem/analog/inverter/inverter.sym # of pins=4
-** sym_path: /foss/designs/TSENSE8490-main/schematic/xschem/analog/inverter/inverter.sym
-** sch_path: /foss/designs/TSENSE8490-main/schematic/xschem/analog/inverter/inverter.sch
-.subckt inverter pos in out neg  wp=0.74u wn=1.12u
-*.PININFO in:I pos:B neg:B out:O
-MM1 out in neg neg sg13_lv_nmos w={wn} l=0.13u ng=1
-MM2 pos in out pos sg13_lv_pmos w={wp} l=0.13u ng=1
-.ends
-
+.GLOBAL sub!
